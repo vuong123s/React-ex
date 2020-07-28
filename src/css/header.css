@@ -11,6 +11,7 @@
   color: #616161;
   font-size: 16px;
 }
+
 .Header {
   display: flex;
   width: 1140px;
@@ -54,4 +55,67 @@
 
 .Search-icon {
   margin: auto 0;
+}
+
+.Login-Search a {
+  color: #616161;
+  text-decoration: none;
+  padding: 0 20px;
+}
+
+.menu-icon-style {
+  margin: 36px 20px 10px 20px;
+  font-size: 25px;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+/* Card-Buy */
+
+.amount {
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 100%;
+  background-color: #eb8367;
+}
+
+/* Media */
+
+@media (max-width: 800px) {
+  .Header-menu {
+    display: block !important ;
+    position: fixed;
+    width: 100%;
+    top: 80px;
+    left: -100%;
+    transition: all 0.5s;
+    background-color: white;
+  }
+
+  .Header-menu-list li {
+    width: 800px;
+  }
+
+  #check:checked ~ .Header-menu {
+    left: 45%;
+  }
+
+  .Header-menu-list {
+    display: block;
+  }
+
+  .Login-Search {
+    display: block;
+  }
+
+  .Logo {
+    flex-grow: 1;
+  }
+  .menu-icon-style {
+    display: block;
+  }
 }

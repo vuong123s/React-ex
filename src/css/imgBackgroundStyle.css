@@ -1,0 +1,27 @@
+.background-style {
+  background: linear-gradient(
+    118deg,
+    rgba(235, 184, 108, 0.76),
+    rgba(235, 131, 103, 0.9),
+    rgba(184, 235, 108, 0.76)
+  );
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: aliceblue;
+  font-family: Roboto;
+}
+
+.background-style h2 {
+  font-size: 45px;
+}
+
+.background-style h1 {
+  font-size: 50px;
+}
+
+.background-style h5 {
+  font-size: 20px;
+}

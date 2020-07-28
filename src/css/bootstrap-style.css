@@ -1,0 +1,21 @@
+/* slice */
+
+.carousel-item img {
+  height: 640px;
+}
+
+/* Menu */
+
+.style-header {
+  font-family: Roboto;
+}
+
+.form-control {
+  width: 100%;
+}
+
+.button-search {
+  position: absolute;
+  right: 5%;
+  margin: 50px;
+}

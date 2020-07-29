@@ -87,9 +87,15 @@ export default function ComponentHeader() {
         </div>
         <div className="Header-D">
           <div className="Login-Search">
-            <BsSearch className="Search-icon" />
-            <a href="#">Log In</a>
+            <input type="checkbox" id="check-search-bar" />
+            <input type="text" placeholder="Search" className="search-bar" />
+            <label htmlFor="check-search-bar">
+              <BsSearch className="Search-icon" />
+            </label>
           </div>
+          <a href="#" className="Login-style">
+            Log In
+          </a>
           <div className="card-buy">
             <span>Card</span>
             <span className="amount">0</span>

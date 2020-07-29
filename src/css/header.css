@@ -57,10 +57,14 @@
   margin: auto 0;
 }
 
-.Login-Search a {
+.Login-style {
+  color: #616161;
+  padding: 0 20px;
+}
+
+.Login-style:hover {
   color: #616161;
   text-decoration: none;
-  padding: 0 20px;
 }
 
 .menu-icon-style {
@@ -83,6 +87,31 @@
   background-color: #eb8367;
 }
 
+/* Search Bar */
+
+.Login-Search {
+  position: relative;
+}
+
+.search-bar {
+  position: absolute;
+  right: 0;
+  width: 200px;
+  height: 40px;
+  top: 100px;
+  z-index: 1;
+  padding: 3px 10px;
+  display: none;
+}
+
+#check-search-bar {
+  display: none;
+}
+
+#check-search-bar:checked ~ .search-bar {
+  display: block;
+}
+
 /* Media */
 
 @media (max-width: 800px) {
@@ -94,6 +123,7 @@
     left: -100%;
     transition: all 0.5s;
     background-color: white;
+    z-index: 1;
   }
 
   .Header-menu-list li {
@@ -101,7 +131,7 @@
   }
 
   #check:checked ~ .Header-menu {
-    left: 45%;
+    left: 0%;
   }
 
   .Header-menu-list {

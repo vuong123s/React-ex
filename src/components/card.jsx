@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import { RiShoppingBagLine } from "react-icons/ri";
+import { BsEye } from "react-icons/bs";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 export default class card extends Component {
   constructor(props) {
@@ -13,17 +16,71 @@ export default class card extends Component {
           img:
             "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2017/06/book-2-300x426.jpg",
         },
+        {
+          id: 2,
+          name: "Love Does",
+          author: "Bio logi Ace",
+          price: "$25.00",
+          img:
+            "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2017/06/book-1-300x457.jpg",
+        },
+        {
+          id: 3,
+          name: "Rebel of the Sands",
+          author: "Cucu Rustaman",
+          price: "$65.00",
+          img:
+            "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2017/06/rebelsand-book-300x453.jpg",
+        },
+        {
+          id: 4,
+          name: "The Imortal Rules",
+          author: "Asial Harmoni",
+          price: "$55.00",
+          img:
+            "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2017/06/imortal-book-300x452.jpg",
+        },
+        {
+          id: 5,
+          name: "Fairest",
+          author: "Anita Hasibuan",
+          price: "$43.00",
+          img:
+            "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2017/06/fairest-book-300x452.jpg",
+        },
       ],
     };
   }
+
   render() {
     const { products } = this.state;
     return (
-      <div className="Card">
-        <img src={products[0].img} alt="Img" />
-        <h6>{products[0].name}</h6>
-        <p>{products[0].author}</p>
-        <p>{products[0].price}</p>
+      <div className="all-cards">
+        {products.map((item) => {
+          return (
+            <div className="card-style">
+              <div className="Card">
+                <div className="hover-card">
+                  <Link to="/">
+                    <img src={item.img} alt="Img" />
+                  </Link>
+                  <div className="hover-img">
+                    <BsEye className="see-icon" />
+                  </div>
+                </div>
+
+                <h6>{item.name}</h6>
+                <p>{item.author}</p>
+                <div>
+                  <span>{item.price}</span>
+                  <span>
+                    <RiShoppingBagLine className="Icon-buy" />
+                  </span>
+                </div>
+              </div>
+            </div>
+          );
+        })}
       </div>
     );
   }

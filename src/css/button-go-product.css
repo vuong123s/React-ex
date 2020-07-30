@@ -1,0 +1,16 @@
+.go-product {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 16px 50px 16px 50px;
+  margin-bottom: 35px;
+  background: #eb8367;
+  color: white;
+}
+
+.go-product:hover {
+  text-decoration: none;
+  box-shadow: 0 11px 3px -7px rgb(199, 199, 199) !important;
+  transition: 0.5s;
+  transform: translateY(-5px);
+}

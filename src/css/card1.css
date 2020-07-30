@@ -1,0 +1,71 @@
+.introduce-style {
+  margin: 50px 0;
+  width: 570px;
+  display: flex;
+  padding: 20px;
+}
+
+.component-card1 {
+  display: flex;
+  justify-content: center;
+}
+
+.content-introduce {
+  font-family: Roboto;
+  padding: 20px 15px 0;
+}
+
+.content-introduce h2 {
+  font-weight: 700;
+  font-size: 28px;
+}
+
+.content-introduce p {
+  color: #8a8a8a;
+  margin: 15px 0;
+}
+
+.content-introduce a {
+  color: #eb8367;
+  background: rgba(235, 131, 103, 0);
+  font-size: 16px;
+  font-weight: 500;
+  border: 2px solid #eb8367;
+  padding: 8px 30px;
+}
+
+.introduce-style img {
+  width: 100%;
+  max-width: 190px;
+  border: 1px solid #e8e8e8;
+  display: inline-block;
+}
+
+.a {
+  background: linear-gradient(
+      rgba(255, 226, 189, 0.28),
+      rgba(255, 226, 189, 0.28)
+    ),
+    transparent
+      url(https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2017/06/pattern-4.jpg)
+      0% 0% / auto repeat scroll;
+}
+
+.b {
+  background: linear-gradient(
+      rgba(213, 255, 204, 0.28),
+      rgba(213, 255, 204, 0.28)
+    ),
+    transparent
+      url(https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2017/06/pattern-4.jpg)
+      0% 0% / auto repeat scroll;
+}
+
+/* Hover */
+
+.content-introduce a:hover {
+  text-decoration: none;
+  box-shadow: 0 11px 3px -7px rgb(199, 199, 199) !important;
+  transition: 0.5s;
+  transform: translateY(-5px);
+}

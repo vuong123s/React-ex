@@ -121,6 +121,27 @@
   padding: 3px 10px;
 }
 
+/* Latest Book */
+
+.Latest-book {
+  font-family: Roboto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 70px 5px 30px 5px;
+  border-bottom: 1px solid #ededed;
+}
+
+.Latest-book p {
+  color: #a1a1a1;
+}
+
+.Latest-book h3 {
+  font-size: 28px;
+  font-weight: 0.8em;
+  font-weight: 700;
+}
+
 /* Media */
 
 @media (max-width: 800px) {

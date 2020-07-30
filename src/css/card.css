@@ -1,0 +1,22 @@
+/* Card */
+
+.Card {
+  width: 188px;
+  font-family: Roboto;
+  padding: 20px 20px 15px;
+  border: solid 1px #616161;
+}
+
+.Card img {
+  width: 148px;
+}
+
+.Card h6 {
+  font-size: 16px;
+  color: #232323;
+}
+
+.Card p {
+  font-size: 14px;
+  color: #616161;
+}

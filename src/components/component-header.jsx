@@ -2,6 +2,7 @@ import React from "react";
 import Logo from "../img/logo.png";
 import { BsSearch } from "react-icons/bs";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 import {
   Carousel,
   Navbar,
@@ -11,58 +12,6 @@ import {
   Button,
   NavDropdown,
 } from "react-bootstrap";
-/*
-  <Navbar bg="light" expand="lg">
-      <Navbar.Brand href="#home">
-        <img src={Logo} alt="Logo" />
-      </Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mr-auto">
-          <Nav.Link href="#home">Homepage</Nav.Link>
-          <NavDropdown title="Shop" id="basic-nav-dropdown">
-            <NavDropdown.Item href="#action/3.1">Light Novel</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.2">Study Books</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.3">Books</NavDropdown.Item>
-          </NavDropdown>
-          <NavDropdown title="Pages" id="basic-nav-dropdown">
-            <NavDropdown.Item href="#action/3.1">Light Novel</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.2">Study Books</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.3">Books</NavDropdown.Item>
-          </NavDropdown>
-          <NavDropdown title="Blog" id="basic-nav-dropdown">
-            <NavDropdown.Item href="#action/3.1">Light Novel</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.2">Study Books</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.3">Books</NavDropdown.Item>
-          </NavDropdown>
-          <NavDropdown title="Books" id="basic-nav-dropdown">
-            <NavDropdown.Item href="#action/3.1">Light Novel</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.2">Study Books</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.3">Books</NavDropdown.Item>
-          </NavDropdown>
-          <NavDropdown title="Landing" id="basic-nav-dropdown">
-            <NavDropdown.Item href="#action/3.1">Light Novel</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.2">Study Books</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.3">Books</NavDropdown.Item>
-          </NavDropdown>
-        </Nav>
-        <Form inline>
-          <div className="style-search">
-            <FormControl
-              type="text"
-              placeholder="Search"
-              className="mr-sm-2 button-search"
-            />
-            <Button>
-              <BsSearch />
-            </Button>
-          </div>
-          <a src="#">Log In</a>
-          <span>Card</span>
-        </Form>
-      </Navbar.Collapse>
-    </Navbar>
- */
 export default function ComponentHeader() {
   return (
     <div className="Header-Component">
@@ -78,11 +27,22 @@ export default function ComponentHeader() {
         <input type="checkbox" id="check" />
         <div className="Header-menu">
           <ul className="Header-menu-list">
-            <li>Homepage</li>
-            <li>Shop</li>
-            <li>Pages</li>
-            <li>Books</li>
-            <li>Landing</li>
+            <li>
+              <Link to="/">Homepage</Link>
+            </li>
+            <li>
+              <Link to="/products">Shop</Link>
+            </li>
+            <li>
+              <Link to="/">Pages</Link>
+            </li>
+            <li>
+              <Link to="/">Books</Link>
+            </li>
+            <li>
+              <Link to="/">Landing</Link>
+            </li>
+            <input type="text" placeholder="Search" className="delete" />
           </ul>
         </div>
         <div className="Header-D">

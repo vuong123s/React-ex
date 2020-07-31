@@ -1,0 +1,61 @@
+.icon-card2 {
+  font-size: 64px;
+}
+
+.content-title {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin: 18px 0 12px;
+}
+
+.content-content {
+  color: #b0b0b0;
+  font-family: Merriweather;
+  font-size: 13px;
+  font-weight: 300;
+  text-align: left;
+  margin-bottom: 25px;
+}
+
+.card2-component {
+  display: flex;
+  max-width: 1170px;
+}
+
+.card2 {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+}
+
+.card2-style {
+  display: flex;
+  padding: 0 15px;
+}
+
+.style-all-card2 {
+  width: 33.33%;
+}
+
+.style-element {
+  display: flex;
+  padding: 40px 20px;
+}
+
+.content-card2 {
+  padding-left: 25px;
+}
+
+.e1 {
+  border-bottom: 5px solid rgba(178, 220, 113, 0.58);
+}
+
+.e2 {
+  border-bottom: 5px solid rgba(113, 220, 199, 0.58);
+}
+
+.e3 {
+  border-bottom: 5px solid rgba(113, 220, 133, 0.58);
+}

@@ -1,0 +1,106 @@
+/* Img */
+
+.img-slice1 img {
+  width: 170px;
+  height: 245px;
+}
+
+.img-slice1 {
+  width: 207px;
+  display: flex;
+  justify-content: center;
+  padding: 0 18.5px;
+}
+
+.all-img-slice1 {
+  display: flex;
+}
+
+.hover-img-slice1 {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.all-img {
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* content */
+
+.content-slice1 {
+  margin-bottom: 40px;
+}
+
+.p {
+  font-size: 40px;
+  font-weight: 500;
+  text-align: left;
+}
+
+.content-slice1 p em {
+  color: rgba(255, 255, 255, 0.74);
+  font-family: Merriweather;
+  font-size: 18px;
+  font-weight: 300;
+  text-align: left;
+  font-style: italic;
+}
+/* slice */
+
+.slice1-style {
+  width: 55.54%;
+  padding: 0 15px;
+}
+
+.slice1 {
+  color: white;
+  font-family: Roboto;
+  background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    transparent
+      url(https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2017/10/author-casual-columnist-inspire-journalism-story-P9255S3.jpg)
+      50% 40% / cover no-repeat scroll;
+  padding-top: 100px;
+  padding-bottom: 65px;
+}
+
+/* Icon */
+
+.hover-icon-slice1 {
+  background-color: rgba(255, 255, 255, 0.79);
+  width: 50px;
+  height: 50px;
+  color: #df6950;
+  border: 0px hidden #99fff8;
+  border-radius: 3px;
+  justify-content: center;
+  right: 0;
+  margin: 0 60px;
+  align-items: center;
+  position: absolute;
+  display: none;
+  transition: all 5s ease;
+}
+
+/*  */
+.space {
+  width: 44.44%;
+  padding: 0 15px;
+}
+
+.all {
+  max-width: 1170px;
+  display: flex;
+  margin: 0 auto;
+}
+
+/* Hover */
+
+.img-slice1:hover .hover-icon-slice1 {
+  display: flex;
+}
+
+.img-slice1:hover .hover-icon-slice1 a {
+  color: #df6950;
+}

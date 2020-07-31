@@ -35,8 +35,10 @@ export default class card1 extends Component {
           return (
             <div className={item.className}>
               <div className="content-introduce">
-                <h2>{item.title}</h2>
-                <p>{item.content}</p>
+                <div className="content-text">
+                  <h2>{item.title}</h2>
+                  <p>{item.content}</p>
+                </div>
                 <Link to="/">Read More</Link>
               </div>
               <img src={item.img} alt="Img" />

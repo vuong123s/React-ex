@@ -4,6 +4,7 @@ import Slice from "./slice";
 import ComponentHeader from "./component-header";
 import Card from "./card";
 import Card1 from "./card1";
+import Slice1 from "./slice1";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 /* CSS */
 import "../css/header.css";
@@ -12,6 +13,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "../css/card.css";
 import "../css/button-go-product.css";
 import "../css/card1.css";
+import "../css/slice1.css";
 
 export default function HomePage() {
   return (
@@ -36,6 +38,14 @@ export default function HomePage() {
       </div>
       <div className="introduce">
         <Card1 />
+      </div>
+      <div className="slice1">
+        <div className="all">
+          <div className="space"></div>
+          <div className="slice1-style">
+            <Slice1 />
+          </div>
+        </div>
       </div>
     </div>
   );

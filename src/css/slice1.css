@@ -131,3 +131,9 @@
 .img-slice1:hover .hover-icon-slice1 a {
   color: #df6950;
 }
+
+@media (max-width: 750px) {
+  .slice1-style {
+    width: 100%;
+  }
+}

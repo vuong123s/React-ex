@@ -59,3 +59,15 @@
 .e3 {
   border-bottom: 5px solid rgba(113, 220, 133, 0.58);
 }
+
+/* Media */
+
+@media (max-width: 700px) {
+  .card2-component {
+    flex-direction: column;
+    align-items: center;
+  }
+  .style-all-card2 {
+    width: 100%;
+  }
+}

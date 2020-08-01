@@ -1,0 +1,106 @@
+.card4-text p {
+  color: #000000;
+  font-family: Roboto;
+  font-size: 40px;
+  line-height: 35px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin: 0;
+  padding: 0 15px;
+}
+
+.card4-text p b {
+  font-weight: bold;
+}
+
+.card4-component {
+  background: linear-gradient(
+      125deg,
+      #ffffff,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
+    ),
+    transparent
+      url(https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2017/10/stylish-white-apartment-with-sofa-P7QVBQP-300x200.jpg)
+      50% 45% / cover no-repeat scroll;
+  margin-bottom: -50px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin: 0 auto;
+}
+
+.card4 {
+  display: flex;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.email-bar-form {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.8;
+  color: #616161;
+  padding: 0 15px;
+}
+
+.style-form {
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.04), 0 4px 7px rgba(0, 0, 0, 0.08);
+}
+
+.email-bar {
+  padding: 15px 20px;
+  border: none;
+  width: 84.05%;
+}
+
+.email-submit {
+  display: inline-block;
+  padding: 17px;
+  border: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  color: white;
+  background-color: #eb8367;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: inherit;
+  font-weight: 600;
+  line-height: 1.5;
+  text-decoration: none;
+  cursor: pointer;
+  width: 15.95%;
+}
+
+.card4-style {
+  display: flex;
+  width: 100%;
+}
+
+.card4-title {
+  width: 39.57%;
+}
+
+.card4-content {
+  width: 60.42%;
+}
+
+/* Media */
+@media (max-width: 900px) {
+  .card4-style {
+    flex-direction: column;
+  }
+  .card4-title {
+    width: 100%;
+  }
+  .style-form {
+    display: flex;
+  }
+  .email-bar {
+    width: 400px;
+  }
+  .email-submit {
+    width: 100px;
+  }
+}

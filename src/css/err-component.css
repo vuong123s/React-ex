@@ -1,0 +1,65 @@
+.background {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.background-404 {
+  background: url("../img/background-err-page.jpg");
+  background-size: cover;
+  padding: 100px 0;
+}
+
+.err-content {
+  font-family: Roboto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.err-content strong {
+  color: white;
+  font-size: 12.5em;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -20px;
+}
+
+.err-content h1 {
+  font-family: Roboto;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 300;
+  letter-spacing: 0;
+  font-size: 30px;
+  margin: 24px 0;
+}
+
+.input-text {
+  padding: 10px 30px;
+  border: none;
+}
+
+.input-submit {
+  padding: 10px 30px;
+  border: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  color: white;
+  background-color: #eb8367;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: inherit;
+  font-weight: 600;
+  line-height: 1.5;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.err-search {
+  margin-bottom: 30px;
+  padding: 0 10px;
+}
+
+.search-page-err {
+  padding: 100px 0;
+}

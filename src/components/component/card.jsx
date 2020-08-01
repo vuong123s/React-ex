@@ -61,16 +61,19 @@ export default class card extends Component {
             <div className="card-style">
               <div className="Card">
                 <div className="hover-card">
+                  <img src={item.img} alt="Img" />
                   <Link to="/">
-                    <img src={item.img} alt="Img" />
+                    <div className="hover-img">
+                      <BsEye className="see-icon" />
+                    </div>
                   </Link>
-                  <div className="hover-img">
-                    <BsEye className="see-icon" />
-                  </div>
                 </div>
-
-                <h6>{item.name}</h6>
-                <p>{item.author}</p>
+                <Link to="/">
+                  <h6>{item.name}</h6>
+                </Link>
+                <Link to="/">
+                  <p>{item.author}</p>
+                </Link>
                 <div>
                   <span>{item.price}</span>
                   <span>

@@ -1,26 +1,23 @@
 /* React */
 import React from "react";
-import Slice from "./slice";
-import ComponentHeader from "./component-header";
-import Card from "./card";
-import Card1 from "./card1";
-import Slice1 from "./slice1";
-import Card2 from "./card2";
+import Slice from "./component/slice";
+import ComponentHeader from "./component/component-header";
+import Card from "./component/card";
+import Card1 from "./component/card1";
+import Slice1 from "./component/slice1";
+import Card2 from "./component/card2";
+import Card3 from "./component/card3";
+import Card4 from "./component/card4";
+import End from "./component/end";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-/* CSS */
-import "../css/header.css";
-import "../css/bootstrap-style.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "../css/card.css";
-import "../css/button-go-product.css";
-import "../css/card1.css";
-import "../css/slice1.css";
-import "../css/card2.css";
 
 /* Icon */
 
 import { BsTools } from "react-icons/bs";
 import { FaWallet, FaShoppingBasket } from "react-icons/fa";
+
+/* CSS */
+import "../css/delete-err.css";
 
 export default function HomePage() {
   return (
@@ -81,6 +78,24 @@ export default function HomePage() {
           />
         </div>
       </div>
+      <div className="book-collection">
+        <div className="collection">
+          <div className="collection-style">
+            <div className="book-collection-title">
+              <h2>Book Collection</h2>
+              <p>Vivamus ac lacinia libero efficitur lorem.</p>
+            </div>
+            <div className="book-collection-content">
+              <Card3 />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="card4-component">
+        <Card4 />
+      </div>
+      <End />
     </div>
   );
 }

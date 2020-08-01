@@ -10,6 +10,10 @@
   margin-bottom: 40px;
 }
 
+.card-style a {
+  text-decoration: none;
+}
+
 .Card {
   width: 188px;
   font-family: Roboto;
@@ -66,4 +70,11 @@
 .see-icon {
   font-size: 30px;
   color: white;
+}
+
+/* Media */
+
+@media (max-width: 1100px) {
+  .all-cards {
+  }
 }

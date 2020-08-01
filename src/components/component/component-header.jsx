@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../img/logo.png";
+import Logo from "../../img/logo.png";
 import { BsSearch } from "react-icons/bs";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { BrowserRouter as Router, Link } from "react-router-dom";

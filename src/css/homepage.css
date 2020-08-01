@@ -142,6 +142,37 @@
   font-weight: 700;
 }
 
+/* end-homepage */
+
+.end {
+  padding: 20px 0;
+}
+
+.end-homepage {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.8;
+  background-color: #f6f6f6;
+  color: #616161;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.end-homepage-style {
+  max-width: 1170px;
+}
+
+.end-homepage-style a {
+  color: #eb8367;
+}
+
+.end-homepage-style a:hover {
+  text-decoration: none;
+}
+
 /* Media */
 
 @media (max-width: 800px) {

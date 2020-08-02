@@ -27,11 +27,11 @@ import "./css/err-component.css";
 function App() {
   return (
     <div>
-      <Router>
-        <Route path="/" exact component={HomePage}></Route>
-        <Route path="/products" exact component={ProductPage}></Route>
-        <Route component={ErrPage}></Route>
-      </Router>
+      <Switch>
+        <Route path="/" exact component={HomePage} />
+        <Route path="/products" exact component={ProductPage} />
+        <Route component={ErrPage} />
+      </Switch>
     </div>
   );
 }

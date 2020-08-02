@@ -17,7 +17,6 @@ import { BsTools } from "react-icons/bs";
 import { FaWallet, FaShoppingBasket } from "react-icons/fa";
 
 /* CSS */
-import "../css/delete-err.css";
 
 export default function HomePage() {
   return (

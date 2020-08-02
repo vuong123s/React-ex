@@ -72,9 +72,52 @@
   color: white;
 }
 
+.Icon-buy {
+  font-size: 30px;
+  color: #eb8367;
+  float: right;
+  padding-bottom: 6px;
+}
+
 /* Media */
 
 @media (max-width: 1100px) {
-  .all-cards {
+  .hover-card img {
+    width: 115px;
+    height: 150px;
   }
+  .hover-img {
+    width: 115px;
+    height: 150px;
+  }
+  .Card {
+    width: auto;
+  }
+  .Card h6 {
+    font-size: 15px;
+  }
+}
+@media (max-width: 900px) {
+  .all-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hover-card img {
+    width: 230px;
+    height: 330px;
+  }
+  .hover-img {
+    width: 230px;
+    height: 330px;
+  }
+  .Card h6 {
+    font-size: 23px;
+  }
+  .card-style {
+    margin-bottom: 5px;
+  }
+}
+
+.price-book {
+  margin-bottom: 10px;
 }

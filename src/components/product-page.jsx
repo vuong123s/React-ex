@@ -1,7 +1,7 @@
 import React from "react";
 import ComponentHeader from "./component/component-header.jsx";
 import Background from "./component/background";
-import "../css/delete-err.css";
+/*import "../css/delete-err.css";*/
 
 function ProductPage() {
   return (

@@ -22,7 +22,9 @@ export default function ComponentHeader() {
           </label>
         </div>
         <div className="Logo">
-          <img src={Logo} alt="Logo" />
+          <Link to="/">
+            <img src={Logo} alt="Logo" />
+          </Link>
         </div>
         <input type="checkbox" id="check" />
         <div className="Header-menu">

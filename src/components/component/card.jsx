@@ -74,7 +74,7 @@ export default class card extends Component {
                 <Link to="/">
                   <p>{item.author}</p>
                 </Link>
-                <div>
+                <div className="price-book">
                   <span>{item.price}</span>
                   <span>
                     <RiShoppingBagLine className="Icon-buy" />

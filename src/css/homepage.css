@@ -173,25 +173,20 @@
   text-decoration: none;
 }
 
+.component-menu {
+  display: none;
+}
 /* Media */
 
 @media (max-width: 800px) {
   /* Header */
 
   .Header-menu {
-    display: block !important ;
-    position: fixed;
-
-    top: 80px;
-    left: -100%;
-    width: 100%;
-    transition: all 0.5s;
-    background-color: white;
-    z-index: 1;
+    display: none;
   }
 
-  #check:checked ~ .Header-menu {
-    left: 0%;
+  #check:checked ~ .component-menu {
+    display: block;
   }
 
   .Header-menu-list {
@@ -200,6 +195,7 @@
     align-items: flex-start;
   }
   /* menu */
+
   .menu-icon-style {
     display: block;
   }
@@ -212,11 +208,5 @@
   }
   .Logo {
     flex-grow: 1;
-  }
-  /* search bar */
-  .delete {
-    display: block;
-    width: 90%;
-    margin: 0 10px;
   }
 }

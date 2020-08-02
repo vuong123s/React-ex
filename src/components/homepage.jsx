@@ -9,6 +9,7 @@ import Card2 from "./component/card2";
 import Card3 from "./component/card3";
 import Card4 from "./component/card4";
 import End from "./component/end";
+import ComponentMenu from "./component/component-menu";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 /* Icon */
@@ -24,6 +25,8 @@ export default function HomePage() {
       <div className="Component">
         <div className="style-header">
           <ComponentHeader />
+
+          <ComponentMenu className="Component-Menu" />
         </div>
         <div className="Slice">
           <Slice />

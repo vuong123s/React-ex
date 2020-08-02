@@ -12,6 +12,7 @@ import {
   Button,
   NavDropdown,
 } from "react-bootstrap";
+
 export default function ComponentHeader() {
   return (
     <div className="Header-Component">
@@ -26,7 +27,6 @@ export default function ComponentHeader() {
             <img src={Logo} alt="Logo" />
           </Link>
         </div>
-        <input type="checkbox" id="check" />
         <div className="Header-menu">
           <ul className="Header-menu-list">
             <li>
@@ -44,7 +44,6 @@ export default function ComponentHeader() {
             <li>
               <Link to="/">Landing</Link>
             </li>
-            <input type="text" placeholder="Search" className="delete" />
           </ul>
         </div>
         <div className="Header-D">
@@ -55,9 +54,9 @@ export default function ComponentHeader() {
               <BsSearch className="Search-icon" />
             </label>
           </div>
-          <a href="#" className="Login-style">
+          <Link to="/" className="Login-style">
             Log In
-          </a>
+          </Link>
           <div className="card-buy">
             <span>Card</span>
             <span className="amount">0</span>

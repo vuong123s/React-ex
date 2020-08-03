@@ -25,8 +25,7 @@ export default function HomePage() {
       <div className="Component">
         <div className="style-header">
           <ComponentHeader />
-
-          <ComponentMenu className="Component-Menu" />
+          <ComponentMenu />
         </div>
         <div className="Slice">
           <Slice />
@@ -93,7 +92,6 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-
       <div className="card4-component">
         <Card4 />
       </div>

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { RiShoppingBagLine } from "react-icons/ri";
 import { BsEye } from "react-icons/bs";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-
+import CardGround from "./card-ground";
 export default class card extends Component {
   constructor(props) {
     super(props);
@@ -50,6 +50,11 @@ export default class card extends Component {
         },
       ],
     };
+    this.getData = this.getData.bind();
+  }
+
+  getData(id) {
+    console.log(id);
   }
 
   render() {
@@ -58,27 +63,32 @@ export default class card extends Component {
       <div className="all-cards">
         {products.map((item) => {
           return (
-            <div className="card-style">
-              <div className="Card">
-                <div className="hover-card">
-                  <img src={item.img} alt="Img" />
+            <div>
+              <div className="card-style">
+                <div className="Card">
+                  <div className="hover-card">
+                    <img src={item.img} alt="Img" />
+                    <Link to="/">
+                      <label id="get-data-card" className="hover-img">
+                        <BsEye
+                          onClick={this.getData(item.id)}
+                          className="see-icon"
+                        />
+                      </label>
+                    </Link>
+                  </div>
                   <Link to="/">
-                    <div className="hover-img">
-                      <BsEye className="see-icon" />
-                    </div>
+                    <h6>{item.name}</h6>
                   </Link>
-                </div>
-                <Link to="/">
-                  <h6>{item.name}</h6>
-                </Link>
-                <Link to="/">
-                  <p>{item.author}</p>
-                </Link>
-                <div className="price-book">
-                  <span>{item.price}</span>
-                  <span>
-                    <RiShoppingBagLine className="Icon-buy" />
-                  </span>
+                  <Link to="/">
+                    <p>{item.author}</p>
+                  </Link>
+                  <div className="price-book">
+                    <span>{item.price}</span>
+                    <span>
+                      <RiShoppingBagLine className="Icon-buy" />
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>

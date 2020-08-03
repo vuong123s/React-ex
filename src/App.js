@@ -18,6 +18,7 @@ import "./css/slice1.css";
 import "./css/card2.css";
 import "./css/card3.css";
 import "./css/card4.css";
+import "./css/card-ground.css";
 
 /* * ProductPage * */
 

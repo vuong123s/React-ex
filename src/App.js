@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import HomePage from "./components/homepage";
 import ProductPage from "./components/product-page";
 import ErrPage from "./components/err-page";
+import { Data } from "./components/data";
 
 /* CSS */
 /* * HomePage * */
@@ -21,19 +22,22 @@ import "./css/card4.css";
 import "./css/card-ground.css";
 
 /* * ProductPage * */
+import "./css/product-page.css";
 
 /* * ErrPage * */
 import "./css/err-component.css";
 
 function App() {
   return (
-    <div>
-      <Switch>
-        <Route path="/" exact component={HomePage} />
-        <Route path="/products" exact component={ProductPage} />
-        <Route component={ErrPage} />
-      </Switch>
-    </div>
+    <Data>
+      <div>
+        <Switch>
+          <Route path="/" exact component={HomePage} />
+          <Route path="/products" exact component={ProductPage} />
+          <Route component={ErrPage} />
+        </Switch>
+      </div>
+    </Data>
   );
 }
 

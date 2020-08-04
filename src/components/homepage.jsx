@@ -10,6 +10,7 @@ import Card3 from "./component/card3";
 import Card4 from "./component/card4";
 import End from "./component/end";
 import ComponentMenu from "./component/component-menu";
+import { DataContext } from "./data";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 /* Icon */
@@ -19,83 +20,89 @@ import { FaWallet, FaShoppingBasket } from "react-icons/fa";
 
 /* CSS */
 
-export default function HomePage() {
-  return (
-    <div className="homepage">
-      <div className="Component">
-        <div className="style-header">
-          <ComponentHeader />
-          <ComponentMenu />
-        </div>
-        <div className="Slice">
-          <Slice />
-        </div>
-      </div>
-      <div className="Latest-book">
-        <h3>Latest Book</h3>
-        <p>Vivamus ac lacinia libero efficitur lorem.</p>
-        <div className="Card-Style">
-          <Card />
-        </div>
-        <Link to="/products" className="go-product">
-          Start Shop Now
-        </Link>
-      </div>
-      <div className="introduce">
-        <Card1 />
-      </div>
-      <div className="slice1">
-        <div className="all">
-          <div className="space"></div>
-          <div className="slice1-style">
-            <Slice1 />
+export default class HomePage extends React.Component {
+  static contextType = DataContext;
+  render() {
+    const { cards } = this.context;
+    return (
+      <div className="homepage">
+        <div className="Component">
+          <div className="style-header">
+            <ComponentHeader />
+            <ComponentMenu />
+          </div>
+          <div className="Slice">
+            <Slice />
           </div>
         </div>
-      </div>
-      <div className="card2">
-        <div className="card2-component">
-          <Card2
-            color="#fd8aaa"
-            className="card2-style e1"
-            title="High Qualty Book"
-            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            icon={<BsTools />}
-          />
-          <Card2
-            color="#f6b8a2"
-            className="card2-style e2"
-            boder="5px solid rgba(113, 220, 199, 0.58);"
-            title="Best Price"
-            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            icon={<FaWallet />}
-          />
-          <Card2
-            color="#30cfff"
-            className="card2-style e3"
-            boder=" 5px solid rgba(113, 220, 133, 0.58"
-            title="Easy Buy and Download"
-            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            icon={<FaShoppingBasket />}
-          />
-        </div>
-      </div>
-      <div className="book-collection">
-        <div className="collection">
-          <div className="collection-style">
-            <div className="book-collection-title">
-              <h2>Book Collection</h2>
-              <p>Vivamus ac lacinia libero efficitur lorem.</p>
+        <div className="Latest-book">
+          <h3>Latest Book</h3>
+          <p>Vivamus ac lacinia libero efficitur lorem.</p>
+          <div className="Card-Style">
+            <div className="all-cards">
+              <Card>{cards}</Card>
             </div>
-            <div className="book-collection-content">
-              <Card3 />
+          </div>
+          <Link to="/products" className="go-product">
+            Start Shop Now
+          </Link>
+        </div>
+        <div className="introduce">
+          <Card1 />
+        </div>
+        <div className="slice1">
+          <div className="all">
+            <div className="space"></div>
+            <div className="slice1-style">
+              <Slice1 />
             </div>
           </div>
         </div>
+        <div className="card2">
+          <div className="card2-component">
+            <Card2
+              color="#fd8aaa"
+              className="card2-style e1"
+              title="High Qualty Book"
+              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              icon={<BsTools />}
+            />
+            <Card2
+              color="#f6b8a2"
+              className="card2-style e2"
+              boder="5px solid rgba(113, 220, 199, 0.58);"
+              title="Best Price"
+              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              icon={<FaWallet />}
+            />
+            <Card2
+              color="#30cfff"
+              className="card2-style e3"
+              boder=" 5px solid rgba(113, 220, 133, 0.58"
+              title="Easy Buy and Download"
+              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              icon={<FaShoppingBasket />}
+            />
+          </div>
+        </div>
+        <div className="book-collection">
+          <div className="collection">
+            <div className="collection-style">
+              <div className="book-collection-title">
+                <h2>Book Collection</h2>
+                <p>Vivamus ac lacinia libero efficitur lorem.</p>
+              </div>
+              <div className="book-collection-content">
+                <Card3 />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="card4-component">
+          <Card4 />
+        </div>
+        <End />
       </div>
-      <div className="card4-component">
-        <Card4 />
-      </div>
-      <End />
-    </div>
-  );
+    );
+  }
 }

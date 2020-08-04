@@ -1,0 +1,46 @@
+.category-list li a {
+  color: #888787;
+  text-decoration: none;
+}
+
+.category-style p {
+  font-family: Roboto;
+  font-weight: 700;
+  letter-spacing: 0;
+  font-style: italic;
+}
+
+.category-list li {
+  margin: 10px 0;
+  list-style: none;
+}
+
+.body-page {
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+}
+
+.element {
+  display: flex;
+  max-width: 1170px;
+}
+
+.products-item {
+  display: flex;
+  justify-content: center;
+}
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.category-style {
+  width: 33.3%;
+  padding: 30px 100px;
+}
+
+.products {
+  width: 66.6%;
+}

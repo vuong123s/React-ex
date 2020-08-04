@@ -187,8 +187,7 @@
 
   #check:checked ~ .component-menu {
     display: block;
-    animation-name: delay;
-    animation-delay: 1s;
+    transition: 0.5 linear;
   }
 
   .Header-menu-list {

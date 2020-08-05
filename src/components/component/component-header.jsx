@@ -29,19 +29,19 @@ export default function ComponentHeader() {
         </div>
         <div className="Header-menu">
           <ul className="Header-menu-list">
-            <li>
+            <li key="1">
               <Link to="/">Homepage</Link>
             </li>
-            <li>
+            <li key="2">
               <Link to="/products">Shop</Link>
             </li>
-            <li>
+            <li key="3">
               <Link to="/">Pages</Link>
             </li>
-            <li>
+            <li key="4">
               <Link to="/">Books</Link>
             </li>
-            <li>
+            <li key="5">
               <Link to="/">Landing</Link>
             </li>
           </ul>

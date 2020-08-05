@@ -44,3 +44,33 @@
 .products {
   width: 66.6%;
 }
+
+.filter-products {
+  display: flex;
+  padding: 0 100px;
+}
+
+.filter-products p {
+  color: #888787;
+  padding: 0 120px 0 20px;
+}
+
+.products h2 {
+  font-weight: 700;
+  padding: 60px 0;
+}
+
+.button-view-all {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 16px 30px;
+  margin-bottom: 35px;
+  background: #eb8367;
+  color: white;
+}
+
+.button-view-all:hover {
+  color: white;
+  text-decoration: none;
+}

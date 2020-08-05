@@ -3,6 +3,7 @@ import ComponentHeader from "./component/component-header.jsx";
 import Background from "./component/background";
 import { DataContext } from "./data";
 import Card from "./component/card";
+import End from "./component/end";
 import { Dropdown } from "react-bootstrap";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
@@ -15,8 +16,12 @@ class ProductPage extends React.Component {
 
   render() {
     const { products } = this.context;
+    let items = [];
+    for (let i = 0; i < 10; i++) {
+      items.push(products[i]);
+    }
     return (
-      <div>
+      <>
         <div className="style-header">
           <ComponentHeader />
           <Background />
@@ -77,16 +82,21 @@ class ProductPage extends React.Component {
                     </Dropdown.Menu>
                   </Dropdown>
                 </div>
+                <h2>Books</h2>
                 <div className="products-item">
                   <div className="items">
-                    <Card>{products}</Card>
+                    <Card>{items}</Card>
                   </div>
                 </div>
+                <Link to="/" className="button-view-all">
+                  View All
+                </Link>
               </div>
             </div>
           </div>
         </div>
-      </div>
+        <End />
+      </>
     );
   }
 }

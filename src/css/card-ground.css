@@ -8,10 +8,14 @@ body {
   background: rgba(0, 0, 0, 0.8);
   bottom: 0;
   z-index: 1;
-  display: none;
 }
 
 .card-ground-component {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,6 +28,7 @@ body {
   max-width: 1000px;
   background-color: white;
   padding: 30px;
+  position: relative;
 }
 
 .img-content {
@@ -40,7 +45,6 @@ body {
   font-weight: 500;
   padding: 5px 10px 5px 10px;
   border: none;
-  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.19);
   background: #eb8367;
   color: white;
 }

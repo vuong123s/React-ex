@@ -11,6 +11,7 @@ import Card4 from "./component/card4";
 import End from "./component/end";
 import ComponentMenu from "./component/component-menu";
 import { DataContext } from "./data";
+import AddProduct from "./component/add-product";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 /* Icon */
 
@@ -22,12 +23,11 @@ import { FaWallet, FaShoppingBasket } from "react-icons/fa";
 export default class HomePage extends React.Component {
   static contextType = DataContext;
   render() {
-    const { products } = this.context;
+    const { products, data, dataAddProduct } = this.context;
     let items = [];
     for (let i = 0; i < 5; i++) {
       items.push(products[i]);
     }
-    console.log(this.props);
     return (
       <div className="homepage">
         <div className="Component">

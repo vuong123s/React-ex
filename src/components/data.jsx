@@ -87,11 +87,12 @@ export class Data extends Component {
       },
     ],
     data: [[]],
+    dataAddProduct: [],
   };
   render() {
-    const { products, data } = this.state;
+    const { products, data, dataAddProduct } = this.state;
     return (
-      <DataContext.Provider value={{ products, data }}>
+      <DataContext.Provider value={{ products, data, dataAddProduct }}>
         {this.props.children}
       </DataContext.Provider>
     );

@@ -81,7 +81,32 @@
 
 /* Card-Buy */
 
-.amount {
+.card-buy {
+  z-index: 1;
+  position: relative;
+}
+
+.item-img img {
+  width: 75px;
+  height: 110px;
+}
+
+.item-add-content {
+  padding: 0 50px;
+}
+.item {
+  display: flex;
+}
+
+.see-item-products {
+  position: absolute;
+  color: black;
+  background-color: white;
+  right: 0;
+  max-width: 500px;
+}
+
+#amount {
   color: white;
   font-size: 12px;
   padding: 2px 6px;

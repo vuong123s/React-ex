@@ -2,6 +2,7 @@ import React from "react";
 import Logo from "../../img/logo.png";
 import { BsSearch } from "react-icons/bs";
 import { GiHamburgerMenu } from "react-icons/gi";
+import AddProduct from "./add-product";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import {
   Carousel,
@@ -59,7 +60,7 @@ export default function ComponentHeader() {
           </Link>
           <div className="card-buy">
             <span>Card</span>
-            <span className="amount">0</span>
+            <AddProduct />
           </div>
         </div>
       </div>

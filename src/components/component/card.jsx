@@ -32,11 +32,16 @@ export default class card extends Component {
     }
   }
 
+  addData(i) {
+    const { dataAddProduct } = this.context;
+    dataAddProduct.push(i);
+    localStorage.setItem("data", JSON.stringify(dataAddProduct));
+    console.log(i);
+  }
+
   render() {
     const { children } = this.props;
     const { data } = this.context;
-
-    console.log(data);
     return (
       <>
         <div
@@ -70,7 +75,10 @@ export default class card extends Component {
                 <div className="price-book">
                   <span>${item.price}</span>
                   <span>
-                    <RiShoppingBagLine className="Icon-buy" />
+                    <RiShoppingBagLine
+                      onClick={() => this.addData(item)}
+                      className="Icon-buy"
+                    />
                   </span>
                 </div>
               </div>

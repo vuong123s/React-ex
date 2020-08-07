@@ -4,6 +4,7 @@ import { BsEye } from "react-icons/bs";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import CardGround from "./card-ground";
 import { DataContext } from "../data";
+import AddProductCard from "../addProductCard";
 
 export default class card extends Component {
   static contextType = DataContext;
@@ -31,14 +32,16 @@ export default class card extends Component {
       });
     }
   }
-
+  /*
   addData(i) {
-    const { dataAddProduct } = this.context;
+    const getData = JSON.parse(localStorage.getItem("data"));
+    let { dataAddProduct } = this.context;
+    dataAddProduct = getData;
     dataAddProduct.push(i);
     localStorage.setItem("data", JSON.stringify(dataAddProduct));
     console.log(i);
   }
-
+  */
   render() {
     const { children } = this.props;
     const { data } = this.context;
@@ -66,17 +69,17 @@ export default class card extends Component {
                     />
                   </div>
                 </div>
-                <Link to="/">
+                <Link to={`/card/${item._id}`}>
                   <h6>{item.name}</h6>
                 </Link>
                 <Link to="/">
                   <p>{item.author}</p>
                 </Link>
                 <div className="price-book">
-                  <span>${item.price}</span>
+                  <span>£{item.price}.00</span>
                   <span>
                     <RiShoppingBagLine
-                      onClick={() => this.addData(item)}
+                      /*onClick={() => this.addData(item)}*/
                       className="Icon-buy"
                     />
                   </span>

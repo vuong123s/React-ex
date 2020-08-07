@@ -5,7 +5,7 @@
     rgba(235, 131, 103, 0.9),
     rgba(184, 235, 108, 0.76)
   );
-  height: 400px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;

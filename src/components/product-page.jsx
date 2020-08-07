@@ -24,7 +24,7 @@ class ProductPage extends React.Component {
       <>
         <div className="style-header">
           <ComponentHeader />
-          <Background />
+          <Background title="Shop" />
           <div className="body-page">
             <div className="element">
               <div className="category-style">

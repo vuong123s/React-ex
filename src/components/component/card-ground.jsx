@@ -29,16 +29,6 @@ export default class CardGround extends React.Component {
                 then he left find.
               </p>
             </div>
-            <div className="content-button">
-              <input
-                className="input-number"
-                type="number"
-                step="1"
-                min="1"
-                placeholder="0"
-              />
-              <button className="add-product">Add to card</button>
-            </div>
             <div className="button-icon">
               <Link to="/">
                 <Button variant="outline-primary">

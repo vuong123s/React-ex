@@ -2,7 +2,7 @@ import React from "react";
 import Logo from "../../img/logo.png";
 import { BsSearch } from "react-icons/bs";
 import { GiHamburgerMenu } from "react-icons/gi";
-import AddProduct from "./add-product";
+/*import AddProduct from "./add-product";*/
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import {
   Carousel,
@@ -50,7 +50,9 @@ export default function ComponentHeader() {
         <div className="Header-D">
           <div className="Login-Search">
             <input type="checkbox" id="check-search-bar" />
-            <input type="text" placeholder="Search" className="search-bar" />
+            <div className="search-bar-form">
+              <input type="text" placeholder="Search" className="search-bar" />
+            </div>
             <label htmlFor="check-search-bar">
               <BsSearch className="Search-icon" />
             </label>
@@ -58,10 +60,12 @@ export default function ComponentHeader() {
           <Link to="/" className="Login-style">
             Log In
           </Link>
-          <div className="card-buy">
-            <span>Card</span>
-            <AddProduct />
-          </div>
+          <Link to="/card/:id" className="card-style-product">
+            <div className="card-buy">
+              <span>Card</span>
+              <span id="amount">0</span>
+            </div>
+          </Link>
         </div>
       </div>
     </div>

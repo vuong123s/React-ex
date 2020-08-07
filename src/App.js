@@ -27,6 +27,11 @@ import "./css/product-page.css";
 /* * ErrPage * */
 import "./css/err-component.css";
 
+/* Card-page*/
+
+import AddProductCard from "./components/addProductCard";
+import "./css/addProductCard.css";
+
 function App() {
   return (
     <Data>
@@ -34,6 +39,7 @@ function App() {
         <Switch>
           <Route path="/" exact component={HomePage} />
           <Route path="/products" exact component={ProductPage} />
+          <Route path="/card/:id" component={AddProductCard} />
           <Route component={ErrPage} />
         </Switch>
       </div>

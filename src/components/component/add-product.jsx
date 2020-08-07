@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { DataContext } from "../data";
 
 const getData = JSON.parse(localStorage.getItem("data"));
-
 export default class AddProduct extends Component {
   constructor(props) {
     super(props);
@@ -11,8 +10,11 @@ export default class AddProduct extends Component {
 
   render() {
     let { dataAddProduct } = this.context;
+    let allPrice = 0;
     dataAddProduct = getData;
-    console.log(dataAddProduct);
+    for (let a = 0; a < dataAddProduct.length; a++) {
+      allPrice += dataAddProduct[a].price;
+    }
     return (
       <>
         <span id="amount">{dataAddProduct.length}</span>
@@ -26,12 +28,13 @@ export default class AddProduct extends Component {
                   </div>
                   <div className="item-add-content">
                     <h6>{i.name}</h6>
-                    <span>{i.price}</span>
+                    <p>${i.price}</p>
                   </div>
                 </div>
               );
             })}
           </div>
+          <div className="all-price">All Price : ${allPrice}</div>
         </div>
       </>
     );

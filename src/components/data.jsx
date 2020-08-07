@@ -12,6 +12,7 @@ export class Data extends Component {
         price: 40.0,
         img:
           "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2017/06/book-2-300x426.jpg",
+        categories: ["Best Seller", "True Story"],
       },
       {
         _id: 2,
@@ -20,6 +21,7 @@ export class Data extends Component {
         price: 25.0,
         img:
           "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2017/06/book-1-300x457.jpg",
+        categories: ["Best Seller", "Loved"],
       },
       {
         _id: 3,
@@ -28,6 +30,7 @@ export class Data extends Component {
         price: 65.0,
         img:
           "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2017/06/rebelsand-book-300x453.jpg",
+        categories: ["Actions"],
       },
       {
         _id: 4,
@@ -36,6 +39,7 @@ export class Data extends Component {
         price: 55.0,
         img:
           "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2017/06/imortal-book-300x452.jpg",
+        categories: ["Horror"],
       },
       {
         _id: 5,
@@ -44,6 +48,7 @@ export class Data extends Component {
         price: 43.0,
         img:
           "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2017/06/fairest-book-300x452.jpg",
+        categories: ["Best Seller"],
       },
       {
         _id: 6,
@@ -52,6 +57,7 @@ export class Data extends Component {
         price: 55.0,
         img:
           "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2017/06/book-3-330x452.jpg",
+        categories: ["Horror"],
       },
       {
         _id: 7,
@@ -60,6 +66,7 @@ export class Data extends Component {
         price: 35.0,
         img:
           "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2016/10/Book_009-330x452.jpg",
+        categories: ["Drama", " rue Story"],
       },
       {
         _id: 8,
@@ -68,6 +75,7 @@ export class Data extends Component {
         price: 43.0,
         img:
           "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2016/10/book_025-330x452.png",
+        categories: ["Drama", "Horror"],
       },
       {
         _id: 9,
@@ -76,6 +84,7 @@ export class Data extends Component {
         price: 43.0,
         img:
           "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2016/10/book_028-330x452.png",
+        categories: ["Best Seller", "True Story", "Women"],
       },
       {
         _id: 10,
@@ -84,6 +93,7 @@ export class Data extends Component {
         price: 25.0,
         img:
           "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2016/10/Book_001_0-330x452.jpg",
+        categories: ["Best Seller", "True Story"],
       },
     ],
     data: [[]],

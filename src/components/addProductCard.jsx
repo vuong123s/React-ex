@@ -11,7 +11,8 @@ import {
   AiOutlineGooglePlus,
   AiFillLinkedin,
 } from "react-icons/ai";
-
+import CardAnimation from "./component/card-animation";
+import Review from "./component/review";
 export class addProductCard extends Component {
   static contextType = DataContext;
   state = {
@@ -44,78 +45,89 @@ export class addProductCard extends Component {
         categori += `${y + ", "}`;
       }
     }
+    const { addCardProduct } = this.context;
     return (
       <>
         <div className="style-header-add-card">
           <ComponentHeader />
           {product.map((i) => {
             return (
-              <div className="card-page">
-                <div className="card-page-component">
-                  <div className="content-add-card">
-                    <div className="content-title-add-card">
-                      <h2>{i.name}</h2>
-                      <p>{i.author}</p>
-                    </div>
-                    <div className="content-price-add-card">
-                      <h2>£{i.price}.00</h2>
-                    </div>
-                  </div>
-                  <div className="content-img-text">
-                    <div className="content-img">
-                      <img src={i.img} alt="" />
-                    </div>
-                    <div className="content-text-button">
-                      <p>
-                        Dissuade ecstatic and properly saw entirely sir why
-                        laughter endeavor. In on my jointure horrible margaret
-                        suitable he followed speedily. Indeed vanity excuse or
-                        mr lovers of on. By offer scale an stuff. Blush be sorry
-                        no sight. Sang lose of hour then he left find.
-                      </p>
-                      <div className="button-page-card">
-                        <input
-                          className="input-number"
-                          type="number"
-                          step="1"
-                          min="1"
-                          placeholder="0"
-                        />
-                        <button className="add-product">Add to card</button>
+              <>
+                <div className="card-page">
+                  <div className="card-page-component">
+                    <div className="content-add-card">
+                      <div className="content-title-add-card">
+                        <h2>{i.name}</h2>
+                        <p>{i.author}</p>
                       </div>
-                      <div className="button-icon">
-                        <Link to="/">
-                          <Button variant="outline-primary">
-                            <FaFacebookF />
-                            Facebook
-                          </Button>
-                        </Link>
-                        <Link to="/">
-                          <Button variant="outline-success">
-                            <AiFillTwitterSquare />
-                            Twitter
-                          </Button>
-                        </Link>
-                        <Link to="/">
-                          <Button variant="outline-danger">
-                            <AiOutlineGooglePlus />
-                            Google+
-                          </Button>
-                        </Link>
-                        <Link to="/">
-                          <Button variant="outline-info">
-                            <AiFillLinkedin />
-                            LinkedIn
-                          </Button>
-                        </Link>
+                      <div className="content-price-add-card">
+                        <h2>£{i.price}.00</h2>
                       </div>
-                      <div className="Categories-add-card">
-                        Categories: {categori}
+                    </div>
+                    <div className="content-img-text">
+                      <div className="content-img">
+                        <CardAnimation img={i.img} />
+                      </div>
+                      <div className="content-text-button">
+                        <p>
+                          Dissuade ecstatic and properly saw entirely sir why
+                          laughter endeavor. In on my jointure horrible margaret
+                          suitable he followed speedily. Indeed vanity excuse or
+                          mr lovers of on. By offer scale an stuff. Blush be
+                          sorry no sight. Sang lose of hour then he left find.
+                        </p>
+                        <div className="button-page-card">
+                          <input
+                            className="input-number"
+                            type="number"
+                            step="1"
+                            min="1"
+                            placeholder="0"
+                          />
+                          <button
+                            onClick={() => addCardProduct(i._id)}
+                            className="add-product"
+                          >
+                            Add to card
+                          </button>
+                        </div>
+                        <div className="button-icon">
+                          <Link to="/">
+                            <Button variant="outline-primary">
+                              <FaFacebookF />
+                              Facebook
+                            </Button>
+                          </Link>
+                          <Link to="/">
+                            <Button variant="outline-success">
+                              <AiFillTwitterSquare />
+                              Twitter
+                            </Button>
+                          </Link>
+                          <Link to="/">
+                            <Button variant="outline-danger">
+                              <AiOutlineGooglePlus />
+                              Google+
+                            </Button>
+                          </Link>
+                          <Link to="/">
+                            <Button variant="outline-info">
+                              <AiFillLinkedin />
+                              LinkedIn
+                            </Button>
+                          </Link>
+                        </div>
+                        <div className="Categories-add-card">
+                          Categories: {categori}
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
+                <div className="review-component">
+                  <Review i={i} />
+                </div>
+              </>
             );
           })}
 

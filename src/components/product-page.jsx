@@ -34,22 +34,34 @@ class ProductPage extends React.Component {
                     <Link to="/">Action</Link>
                   </li>
                   <li>
-                    <Link to="/">Harem</Link>
+                    <Link to="/">Best Seller</Link>
                   </li>
                   <li>
-                    <Link to="/">School</Link>
+                    <Link to="/">Boys</Link>
                   </li>
                   <li>
-                    <Link to="/">Roman</Link>
+                    <Link to="/">CD</Link>
                   </li>
                   <li>
-                    <Link to="/">Shonen</Link>
+                    <Link to="/">Drama</Link>
                   </li>
                   <li>
-                    <Link to="/">Shojou</Link>
+                    <Link to="/">EA Games</Link>
                   </li>
                   <li>
-                    <Link to="/">Fantasy</Link>
+                    <Link to="/">Horror</Link>
+                  </li>
+                  <li>
+                    <Link to="/">Loved</Link>
+                  </li>
+                  <li>
+                    <Link to="/">True Story</Link>
+                  </li>
+                  <li>
+                    <Link to="/">Uncategorized</Link>
+                  </li>
+                  <li>
+                    <Link to="/">Women</Link>
                   </li>
                 </ul>
               </div>

@@ -64,12 +64,13 @@
 }
 .content-text-button {
   font-size: 18px;
-  padding-left: 50px;
+  padding-left: 150px;
   font-family: Roboto;
 }
 
 .content-text-button p {
   margin: 18px 0;
+  color: #616161;
 }
 
 .button-page-card {
@@ -80,4 +81,21 @@
   padding: 10px 0;
   border-top: 1px solid #e3e3e3;
   border-bottom: 1px solid #e3e3e3;
+}
+
+.summit-button {
+  padding: 17px;
+  border: none;
+  border-radius: 0;
+  color: white;
+  background-color: #eb8367;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: inherit;
+  font-weight: 600;
+  width: 150px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px;
 }

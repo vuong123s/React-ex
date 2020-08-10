@@ -28,9 +28,14 @@ import "./css/product-page.css";
 import "./css/err-component.css";
 
 /* Card-page*/
-
-import AddProductCard from "./components/addProductCard";
+import CardPage from "./components/addProductCard";
 import "./css/addProductCard.css";
+import "./css/card-animation.css";
+import "./css/review.css";
+
+/* Product-Page */
+import AddProductPage from "./components/add-product-page";
+import "./css/add-page.css";
 
 function App() {
   return (
@@ -39,7 +44,12 @@ function App() {
         <Switch>
           <Route path="/" exact component={HomePage} />
           <Route path="/products" exact component={ProductPage} />
-          <Route path="/card/:id" component={AddProductCard} />
+          <Route path="/card/:id" component={CardPage} />
+          <Route
+            path="/add-product-card"
+            exact
+            component={AddProductPage}
+          ></Route>
           <Route component={ErrPage} />
         </Switch>
       </div>

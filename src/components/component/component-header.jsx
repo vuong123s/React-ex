@@ -60,7 +60,7 @@ export default function ComponentHeader() {
           <Link to="/" className="Login-style">
             Log In
           </Link>
-          <Link to="/card/:id" className="card-style-product">
+          <Link to="/add-product-card" className="card-style-product">
             <div className="card-buy">
               <span>Card</span>
               <span id="amount">0</span>

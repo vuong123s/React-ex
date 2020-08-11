@@ -32,19 +32,10 @@ export default class card extends Component {
       });
     }
   }
-  /*
-  addData(i) {
-    const getData = JSON.parse(localStorage.getItem("data"));
-    let { dataAddProduct } = this.context;
-    dataAddProduct = getData;
-    dataAddProduct.push(i);
-    localStorage.setItem("data", JSON.stringify(dataAddProduct));
-    console.log(i);
-  }
-  */
+
   render() {
     const { children } = this.props;
-    const { data } = this.context;
+    const { data, addCardProduct } = this.context;
     return (
       <>
         <div
@@ -79,7 +70,7 @@ export default class card extends Component {
                   <span>£{item.price}.00</span>
                   <span>
                     <RiShoppingBagLine
-                      /*onClick={() => this.addData(item)}*/
+                      onClick={() => addCardProduct(item._id)}
                       className="Icon-buy"
                     />
                   </span>

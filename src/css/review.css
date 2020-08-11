@@ -1,6 +1,7 @@
 /* review */
 .review {
   max-width: 1170px;
+  margin: 50px 0;
 }
 
 .review h2 {
@@ -42,6 +43,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 50x;
+  display: none;
 }
 
 /* check-save */

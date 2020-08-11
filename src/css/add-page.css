@@ -13,17 +13,100 @@
 
 .product-name {
   text-align: left;
+  width: 30em;
 }
 
 .product-price {
   text-align: right;
-}
-
-.product-quantity {
-  width: 100px;
+  width: 15em;
 }
 
 .product-subtotal {
-  padding-right: 20px;
   text-align: right;
+  width: 13em;
+}
+
+/* page */
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 0 20px 0;
+}
+
+.page-form {
+  max-width: 1170px;
+}
+
+/* table */
+
+.table {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.table th {
+  padding: 30px;
+}
+
+.table-img {
+  width: 60px;
+}
+
+.table-img img {
+  width: 60px;
+}
+
+.table-number input {
+  max-width: 100px;
+}
+
+.table-head {
+  background-color: #232323;
+  color: white;
+}
+
+/* total */
+
+.subtotal {
+  width: 50%;
+  padding: 100px 0 0 0;
+}
+
+.table-name {
+  color: #616161;
+  font-weight: 700;
+}
+
+.table-total-head {
+  background-color: #f6f6f6;
+}
+
+.table-total {
+  color: #616161;
+  margin: 30px 0;
+}
+
+.table-total th {
+  width: 20em;
+  padding: 30px 15px;
+}
+
+.table-total td {
+  width: 20em;
+  padding: 30px 15px;
+}
+
+.card-total h2 {
+  font-size: 2.8em;
+  font-weight: 700;
+}
+
+.card-total {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.check-out-total {
+  margin: 0 400px;
+  padding: 10px 40px;
 }

@@ -10,6 +10,8 @@ export class Data extends Component {
         name: "Huckleberry Fin",
         author: "Jul Abraham",
         price: 40.0,
+        imgAthor:
+          "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2016/10/author_7-150x150.jpg",
         img:
           "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2017/06/book-2-300x426.jpg",
         categories: ["Best Seller", "True Story"],
@@ -19,6 +21,8 @@ export class Data extends Component {
         name: "Love Does",
         author: "Bio logi Ace",
         price: 25.0,
+        imgAthor:
+          "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2016/10/author_7-150x150.jpg",
         img:
           "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2017/06/book-1-300x457.jpg",
         categories: ["Best Seller", "Loved"],
@@ -28,6 +32,8 @@ export class Data extends Component {
         name: "Rebel of the Sands",
         author: "Cucu Rustaman",
         price: 65.0,
+        imgAthor:
+          "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2016/10/author_7-150x150.jpg",
         img:
           "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2017/06/rebelsand-book-300x453.jpg",
         categories: ["Actions"],
@@ -36,6 +42,8 @@ export class Data extends Component {
         _id: 4,
         name: "The Imortal Rules",
         author: "Asial Harmoni",
+        imgAthor:
+          "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2016/10/author_7-150x150.jpg",
         price: 55.0,
         img:
           "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2017/06/imortal-book-300x452.jpg",
@@ -46,6 +54,8 @@ export class Data extends Component {
         name: "Fairest",
         author: "Armado Kilano",
         price: 43.0,
+        imgAthor:
+          "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2016/10/author_7-150x150.jpg",
         img:
           "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2017/06/fairest-book-300x452.jpg",
         categories: ["Best Seller"],
@@ -55,6 +65,8 @@ export class Data extends Component {
         name: "End of Watch",
         author: "Armado Kilano",
         price: 55.0,
+        imgAthor:
+          "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2016/10/author_7-150x150.jpg",
         img:
           "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2017/06/book-3-330x452.jpg",
         categories: ["Horror"],
@@ -64,6 +76,8 @@ export class Data extends Component {
         name: "Last Piano",
         author: "G Blakemore Evans",
         price: 35.0,
+        imgAthor:
+          "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2016/10/author_7-150x150.jpg",
         img:
           "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2016/10/Book_009-330x452.jpg",
         categories: ["Drama", " rue Story"],
@@ -72,6 +86,8 @@ export class Data extends Component {
         _id: 8,
         name: "Mutan It`s True?",
         author: "Iwan Gaet",
+        imgAthor:
+          "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2016/10/author_7-150x150.jpg",
         price: 43.0,
         img:
           "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2016/10/book_025-330x452.png",
@@ -80,6 +96,8 @@ export class Data extends Component {
       {
         _id: 9,
         name: "Blood Repair",
+        imgAthor:
+          "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2016/10/author_7-150x150.jpg",
         author: "Yuni Ayunda",
         price: 43.0,
         img:
@@ -90,6 +108,8 @@ export class Data extends Component {
         _id: 10,
         name: "The Wonder Years",
         author: "Ama Aipama",
+        imgAthor:
+          "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2016/10/author_7-150x150.jpg",
         price: 25.0,
         img:
           "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2016/10/Book_001_0-330x452.jpg",
@@ -99,6 +119,8 @@ export class Data extends Component {
         _id: 11,
         name: "Blue Drama",
         author: "Micshon Andrea",
+        imgAthor:
+          "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2016/10/author_7-150x150.jpg",
         price: 110.0,
         img:
           "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2016/10/Book_016-330x452.jpg",
@@ -108,6 +130,8 @@ export class Data extends Component {
         _id: 12,
         name: "City of Fallen Angels",
         author: "G Blakemore Evans",
+        imgAthor:
+          "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2016/10/author_7-150x150.jpg",
         price: 20.0,
         img:
           "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2016/10/Book_008_0-330x452.jpg",
@@ -116,6 +140,8 @@ export class Data extends Component {
       {
         _id: 13,
         name: "Classic Story",
+        imgAthor:
+          "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2016/10/author_7-150x150.jpg",
         author: "Armado Kilano",
         price: 75.0,
         img:
@@ -125,6 +151,8 @@ export class Data extends Component {
       {
         _id: 14,
         name: "Cooking Class",
+        imgAthor:
+          "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2016/10/author_7-150x150.jpg",
         author: "Ani Solahudin",
         price: 100.0,
         img:
@@ -133,6 +161,8 @@ export class Data extends Component {
       },
       {
         _id: 15,
+        imgAthor:
+          "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2016/10/author_7-150x150.jpg",
         name: "Glass of Glass",
         author: "Zie Zaenudin",
         price: 100.0,
@@ -143,6 +173,8 @@ export class Data extends Component {
       {
         _id: 16,
         name: "Kursi Taman",
+        imgAthor:
+          "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2016/10/author_7-150x150.jpg",
         author: "Iwan Gaet",
         price: 75.0,
         img:
@@ -152,6 +184,8 @@ export class Data extends Component {
       {
         _id: 17,
         name: "Laju ke Depan",
+        imgAthor:
+          "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2016/10/author_7-150x150.jpg",
         author: "G Blakemore Evans",
         price: 95.0,
         img:
@@ -161,6 +195,8 @@ export class Data extends Component {
       {
         _id: 18,
         name: "Lavendar Honey",
+        imgAthor:
+          "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2016/10/author_7-150x150.jpg",
         author: "Yuni Ayunda",
         price: 80.0,
         img:
@@ -170,6 +206,8 @@ export class Data extends Component {
       {
         _id: 19,
         name: "Life Giant",
+        imgAthor:
+          "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2016/10/author_7-150x150.jpg",
         author: "G Blakemore Evans",
         price: 95.0,
         img:
@@ -178,6 +216,8 @@ export class Data extends Component {
       },
       {
         _id: 20,
+        imgAthor:
+          "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2016/10/author_7-150x150.jpg",
         name: "Maje Ke depan",
         author: "Sukaesih Tuti",
         price: 120.0,
@@ -187,6 +227,8 @@ export class Data extends Component {
       },
       {
         _id: 21,
+        imgAthor:
+          "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2016/10/author_7-150x150.jpg",
         name: "Maqu Meja",
         author: "Iwan Gaet",
         price: 78.0,
@@ -197,6 +239,8 @@ export class Data extends Component {
       {
         _id: 22,
         name: "Mrs Laela",
+        imgAthor:
+          "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2016/10/author_7-150x150.jpg",
         author: "Yuni Ayunda",
         price: 65.0,
         img:
@@ -208,6 +252,8 @@ export class Data extends Component {
         name: "Naga Asaf",
         author: "Micshon Andrea",
         price: 45.0,
+        imgAthor:
+          "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2016/10/author_7-150x150.jpg",
         img:
           "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2016/10/Book_011.jpg",
         categories: ["Drama", "True Story"],
@@ -215,6 +261,8 @@ export class Data extends Component {
       {
         _id: 24,
         name: "Red is Merah",
+        imgAthor:
+          "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2016/10/author_7-150x150.jpg",
         author: "Kang Emil",
         price: 120.0,
         img:
@@ -231,12 +279,25 @@ export class Data extends Component {
     const dataAdd = products.filter((i) => {
       return i._id === id;
     });
-    console.log(dataAdd);
+    this.setState({ dataAddProduct: [...dataAddProduct, ...dataAdd] });
   };
+
+  componentDidUpdate() {
+    localStorage.setItem(
+      "dataItemCard",
+      JSON.stringify(this.state.dataAddProduct)
+    );
+  }
+
+  componentDidMount() {
+    const dataItemCard = JSON.parse(localStorage.getItem("dataItemCard"));
+    if (dataItemCard !== null) this.setState({ dataAddProduct: dataItemCard });
+  }
 
   render() {
     const { products, data, dataAddProduct } = this.state;
     const { addCardProduct } = this;
+
     return (
       <DataContext.Provider
         value={{ products, data, dataAddProduct, addCardProduct }}

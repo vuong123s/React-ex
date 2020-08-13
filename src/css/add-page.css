@@ -21,6 +21,10 @@
   width: 15em;
 }
 
+.product-quantity input {
+  width: 100px;
+}
+
 .product-subtotal {
   text-align: right;
   width: 13em;
@@ -109,4 +113,24 @@
 .check-out-total {
   margin: 0 400px;
   padding: 10px 40px;
+}
+
+.count {
+  width: 25px;
+  border: 1px solid #616161;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.count:focus {
+  outline: none;
+}
+
+.numberCart {
+  padding: 0 15px;
+}
+
+@media (max-width: 600px) {
+  .table-card {
+    display: none;
+  }
 }

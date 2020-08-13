@@ -20,6 +20,11 @@ class ProductPage extends React.Component {
     for (let i = 0; i < 10; i++) {
       items.push(products[i]);
     }
+
+    const a = items.filter((i) => {
+      return i.categories[0] === "Actions";
+    });
+    console.log(a);
     return (
       <>
         <div className="style-header">

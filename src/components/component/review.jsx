@@ -42,6 +42,17 @@ export default function Review(props) {
             <textarea name="" id="" cols="60" rows="10"></textarea>
           </div>
 
+          <div className="account">
+            <div className="name-account">
+              <p>Name *</p>
+              <input type="text" />
+            </div>
+            <div className="email-account">
+              <p>Email *</p>
+              <input type="text" />
+            </div>
+          </div>
+
           <div className="check-save">
             <input type="checkbox" name="" id="" />
             <p>

@@ -14,11 +14,20 @@ import CardAnimation from "./component/card-animation";
 import Review from "./component/review";
 export class addProductCard extends Component {
   static contextType = DataContext;
+  constructor(props) {
+    super(props);
+    this.handleChange = this.handleChange.bind(this);
+  }
+
   state = {
     product: [],
     flex: "none",
     flex1: "flex",
     flex2: "none",
+    color: "#232323",
+    color1: "#eb8367",
+    color2: "#232323",
+    value: "1",
   };
 
   getData = () => {
@@ -27,33 +36,62 @@ export class addProductCard extends Component {
       const data = res.filter((i) => {
         return i._id === Number(this.props.match.params.id);
       });
-      console.log(data);
-
       this.setState({
         product: data,
       });
     }
   };
 
+  handleChange(event) {
+    this.setState({ value: event.target.value });
+  }
+
   componentDidMount() {
     this.getData();
   }
 
+  componentDidUpdate() {
+    const { product } = this.state;
+    const { getCount } = this.context;
+    getCount(this.state.value, product[0]._id);
+  }
+
   changeFlex() {
     if (this.state.flex === "none") {
-      this.setState({ flex2: "none", flex1: "none", flex: "flex" });
+      this.setState({
+        flex2: "none",
+        flex1: "none",
+        flex: "flex",
+        color: "#eb8367",
+        color1: "#232323",
+        color2: "#232323",
+      });
     }
   }
 
   changeFlex1() {
     if (this.state.flex1 === "none") {
-      this.setState({ flex: "none", flex2: "none", flex1: "flex" });
+      this.setState({
+        flex: "none",
+        flex2: "none",
+        flex1: "flex",
+        color: "#232323",
+        color1: "#eb8367",
+        color2: "#232323",
+      });
     }
   }
 
   changeFlex2() {
     if (this.state.flex2 === "none") {
-      this.setState({ flex: "none", flex1: "none", flex2: "flex" });
+      this.setState({
+        flex: "none",
+        flex1: "none",
+        flex2: "flex",
+        color: "#232323",
+        color1: "#232323",
+        color2: "#eb8367",
+      });
     }
   }
 
@@ -97,19 +135,22 @@ export class addProductCard extends Component {
                           sorry no sight. Sang lose of hour then he left find.
                         </p>
                         <div className="button-page-card">
-                          <input
-                            className="input-number"
-                            type="number"
-                            step="1"
-                            min="1"
-                            placeholder="1"
-                          />
-                          <button
-                            onClick={() => addCardProduct(i._id)}
-                            className="add-product"
-                          >
-                            Add to card
-                          </button>
+                          <form>
+                            <label>
+                              <input
+                                className="input-number"
+                                type="number"
+                                value={this.state.value}
+                                onChange={this.handleChange}
+                              />
+                            </label>
+                            <button
+                              onClick={() => addCardProduct(i._id)}
+                              className="add-product"
+                            >
+                              Add to card
+                            </button>
+                          </form>
                         </div>
                         <div className="button-icon">
                           <Link to="/">
@@ -146,9 +187,24 @@ export class addProductCard extends Component {
                 </div>
                 <div className="container">
                   <ul className="container-ul">
-                    <li onClick={() => this.changeFlex1()}>Description</li>
-                    <li onClick={() => this.changeFlex2()}>Meet The Author</li>
-                    <li onClick={() => this.changeFlex()}>Review (0)</li>
+                    <li
+                      onClick={() => this.changeFlex1()}
+                      style={{ color: this.state.color1 }}
+                    >
+                      Description
+                    </li>
+                    <li
+                      onClick={() => this.changeFlex2()}
+                      style={{ color: this.state.color2 }}
+                    >
+                      Meet The Author
+                    </li>
+                    <li
+                      onClick={() => this.changeFlex()}
+                      style={{ color: this.state.color }}
+                    >
+                      Review (0)
+                    </li>
                   </ul>
                 </div>
 

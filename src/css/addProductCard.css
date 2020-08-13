@@ -109,7 +109,7 @@
 .description {
   display: flex;
   justify-content: center;
-  padding: 50px 0;
+  padding: 50px;
   color: #616161;
 }
 
@@ -173,4 +173,16 @@
 
 .container-ul li:hover {
   color: #eb8367;
+}
+
+@media (max-width: 1050px) {
+  .content-img-text {
+    flex-direction: column;
+  }
+  .content-text-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 30px;
+  }
 }

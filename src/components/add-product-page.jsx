@@ -8,16 +8,65 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 export default class AddProductPage extends React.Component {
   static contextType = DataContext;
+  constructor(props) {
+    super(props);
+  }
+
   render() {
-    const { dataAddProduct, addCardProduct } = this.context;
+    const { dataAddProduct, deleteCardProduct, plus, minus } = this.context;
+
     let allPrice = 0;
     for (let a = 0; a < dataAddProduct.length; a++) {
-      allPrice += dataAddProduct[a].price;
+      let b = dataAddProduct[a].price * dataAddProduct[a].count;
+      allPrice += b;
     }
+
     return (
       <div className="add-prodct-page">
         <ComponentHeader />
         <Background title="Cart" />
+        <div className="cart-buy-component">
+          {dataAddProduct.map((i) => {
+            return (
+              <div className="cart">
+                <div className="cart-buy">
+                  <div className="style-cart-buy">
+                    <div className="cart-buy-icon">
+                      <div className="cart-buy-img">
+                        <img src={i.img} alt="" width={100} height={150} />
+                      </div>
+                      <RiDeleteBin5Line size={25} />
+                    </div>
+                    <div className="cart-buy-name">
+                      <p className="width-title">Product</p>
+                      <p>{i.name}</p>
+                    </div>
+                    <div className="cart-buy-price">
+                      <p className="width-title">Price</p>
+                      <p>£{i.price}.00</p>
+                    </div>
+                  </div>
+                  <div className="cart-buy-quantity">
+                    <p className="width-title">Quantity</p>
+                    <td class="product-quantity">
+                      <button className="count" onClick={() => minus(i._id)}>
+                        -
+                      </button>
+                      <span className="numberCart">{i.count}</span>
+                      <button className="count" onClick={() => plus(i._id)}>
+                        +
+                      </button>
+                    </td>
+                  </div>
+                  <div className="cart-buy-total">
+                    <p className="width-title">Total</p>
+                    <p>£{i.count * i.price}.00</p>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
         <div className="page">
           <div className="page-form">
             <div className="table-card">
@@ -28,6 +77,8 @@ export default class AddProductPage extends React.Component {
                     <th class="product-thumbnail">&nbsp;</th>
                     <th class="product-name">Product</th>
                     <th class="product-price">Price</th>
+
+                    <th class="product-quantity">Quantity</th>
                     <th class="product-subtotal">Total</th>
                   </tr>
                 </thead>
@@ -36,7 +87,10 @@ export default class AddProductPage extends React.Component {
                     return (
                       <tr>
                         <td className="product-remove table-delete">
-                          <RiDeleteBin5Line size={25} />
+                          <RiDeleteBin5Line
+                            size={25}
+                            onClick={() => deleteCardProduct(i._id)}
+                          />
                         </td>
                         <td className="product-thumbnail table-img">
                           <Link to={`/card/${i._id}`}>
@@ -47,8 +101,20 @@ export default class AddProductPage extends React.Component {
                         <td className="product-price table-price">
                           £{i.price}.00
                         </td>
+                        <td class="product-quantity">
+                          <button
+                            className="count"
+                            onClick={() => minus(i._id)}
+                          >
+                            -
+                          </button>
+                          <span className="numberCart">{i.count}</span>
+                          <button className="count" onClick={() => plus(i._id)}>
+                            +
+                          </button>
+                        </td>
                         <td className="product-subtotal table-total">
-                          £{i.price}.00
+                          £{i.count * i.price}.00
                         </td>
                       </tr>
                     );
@@ -72,8 +138,8 @@ export default class AddProductPage extends React.Component {
               </table>
             </div>
           </div>
+          <button className="add-product check-out-total">Check Out</button>
         </div>
-        <button className="add-product check-out-total">Check Out</button>
         <End />
       </div>
     );

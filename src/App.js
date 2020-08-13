@@ -37,6 +37,9 @@ import "./css/review.css";
 import AddProductPage from "./components/add-product-page";
 import "./css/add-page.css";
 
+/* Card Buy Page */
+import "./css/card-buy.css";
+
 function App() {
   return (
     <Data>

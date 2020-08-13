@@ -72,3 +72,24 @@
 .one {
   border-left: none;
 }
+
+/* media */
+
+@media (max-width: 1200px) {
+  .review-text {
+    flex-direction: column;
+    align-items: center;
+  }
+  .comment-review {
+    display: flex;
+    justify-content: center;
+    padding: 0 70px;
+  }
+}
+
+@media (max-width: 600px) {
+  .textarea-review textarea {
+    width: 400px;
+    height: 200px;
+  }
+}

@@ -1,23 +1,20 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { BsBag } from "react-icons/bs";
+import { DataContext } from "../data";
 
 export default class slice1 extends Component {
+  static contextType = DataContext;
   constructor(props) {
     super(props);
-    this.state = {
-      imgSlice: [
-        "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2016/10/Book_019.jpg",
-        "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2016/10/book_025.png",
-        "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2016/10/Book_015.jpg",
-        "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2016/10/Book_016.jpg",
-        "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2017/05/book-3.jpg",
-        "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2017/05/book-4.jpg",
-      ],
-    };
   }
   render() {
-    const { imgSlice } = this.state;
+    const { products } = this.context;
+    let slice = [];
+    for (let i = 0; i < 6; i++) {
+      slice.push(products[i]);
+    }
+
     return (
       <div className="element-slice1">
         <div className="content-slice1">
@@ -33,15 +30,15 @@ export default class slice1 extends Component {
         </div>
         <div className="all-img">
           <div className="all-img-slice1">
-            {imgSlice.map((item) => {
+            {slice.map((item) => {
               return (
                 <div className="img-slice1">
                   <Link to="/">
-                    <img src={item} alt="Slice-Img" />
+                    <img src={item.img} alt="Slice-Img" />
                   </Link>
                   <div className="hover-img-slice1">
                     <div className="hover-icon-slice1">
-                      <Link to="">
+                      <Link to={`card/${item._id}`}>
                         <BsBag />
                       </Link>
                     </div>

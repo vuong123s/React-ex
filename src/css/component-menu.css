@@ -35,3 +35,15 @@
 .lock-icon {
   margin-right: 10px;
 }
+
+.search-media-bar {
+  display: flex;
+}
+
+.search-media-bar input:focus {
+  outline: none;
+}
+
+.icon-media {
+  margin: auto 10px;
+}

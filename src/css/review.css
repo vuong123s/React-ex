@@ -35,6 +35,7 @@
 
 .text-right-review {
   width: 50%;
+  padding: 0 20px;
 }
 
 /* review-component */
@@ -71,6 +72,15 @@
 
 .one {
   border-left: none;
+}
+
+/* Comment */
+
+.user-comment p {
+  border-bottom: 1px solid #9b9b9b;
+}
+.user-comment {
+  margin: 10px 0;
 }
 
 /* media */

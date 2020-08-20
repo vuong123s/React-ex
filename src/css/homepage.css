@@ -257,3 +257,24 @@
     flex-grow: 1;
   }
 }
+
+.icon-bar-menu-search {
+  margin: 10px;
+  position: absolute;
+  display: flex;
+}
+
+.bar-menu-search {
+  width: 36px;
+  height: 36px;
+  position: relative;
+  color: #616161;
+}
+
+.bar-menu-search:hover {
+  color: #eb8367;
+}
+
+.search-bar:focus {
+  outline: none;
+}

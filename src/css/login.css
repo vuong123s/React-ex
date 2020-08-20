@@ -1,0 +1,114 @@
+.log-in-tap {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+}
+
+.login-tap-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 250px;
+}
+
+.login-form {
+  background: white;
+  position: relative;
+  min-width: 860px;
+}
+
+.login-form h3 {
+  color: #232323;
+  font-family: "roboto";
+  font-weight: 700;
+  line-height: normal;
+  position: relative;
+  margin: 30px 0;
+  padding-bottom: 20px;
+  font-size: 24px;
+}
+
+.span-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  content: " ";
+  background: #eb8367;
+}
+
+.icon-return {
+  position: absolute;
+  z-index: 9;
+  top: -24px;
+  right: -24px;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: 3px solid #eb8367;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  color: #eb8367;
+  background-color: white;
+  font-size: 24px;
+  font-size: 1.5em;
+  line-height: 48px;
+}
+
+.input-login-tap {
+  width: 100%;
+  height: 30px;
+  border: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+.input-login-tap:focus {
+  outline: none;
+}
+
+.check-box {
+  display: flex;
+  flex-grow: 1;
+}
+
+.check-box input {
+  margin: 5px 10px;
+}
+
+.element-Data {
+  display: flex;
+}
+
+.x1 {
+  font-size: 16px;
+  padding: 0 50px !important;
+}
+
+.form-content {
+  padding: 0 30px;
+}
+
+.lost-pass {
+  display: flex;
+  justify-content: flex-end;
+  padding: 30px 0;
+  font-size: 12px;
+  color: #616161;
+}
+
+@media (max-width: 920px) {
+  .login-form {
+    min-width: 600px;
+  }
+}
+
+@media (max-width: 680px) {
+  .login-form {
+    min-width: 425px;
+  }
+}

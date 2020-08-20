@@ -4,70 +4,107 @@ import Background from "./component/background";
 import { DataContext } from "./data";
 import Card from "./component/card";
 import End from "./component/end";
-import { Dropdown } from "react-bootstrap";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-
+import { Dropdown, Pagination } from "react-bootstrap";
+import ComponentMenu from "./component/component-menu";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  Redirect,
+} from "react-router-dom";
+import CardGround from "./component/card-ground";
+import queryString from "query-string";
+import PageLogIn from "./component/pageLogIn";
 class ProductPage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.Reload = this.Reload.bind(this);
+  }
   state = {
     trans: "Default sorting",
+    firstItem: "block",
+    lastItem: "block",
+    nextUrlPage: () => {
+      const a = queryString.parse(this.props.location.search);
+      const b = Number(a.page) + 1;
+      return `/products/?page=${b}`;
+    },
+    prevUrlPage: () => {
+      const a = queryString.parse(this.props.location.search);
+      const b = Number(a.page) - 1;
+      return `/products/?page=${b}`;
+    },
   };
 
   static contextType = DataContext;
 
+  componentDidMount() {
+    const { ChangeState, Pagination } = this.context;
+    ChangeState();
+    const a = queryString.parse(this.props.location.search);
+    Pagination(Number(a.page));
+    if (Number(a.page) === 1) {
+      this.setState({ firstItem: "none" });
+    }
+    if (Number(a.page) === 4) {
+      this.setState({ lastItem: "none" });
+    }
+  }
+
+  Reload = () => {
+    setTimeout(() => window.location.reload(), 100);
+  };
+
   render() {
-    const { products } = this.context;
-    let items = [];
-    for (let i = 0; i < 10; i++) {
-      items.push(products[i]);
+    const {
+      filter,
+      outItem,
+      isDisplay,
+      filterItem,
+      HighttoLow,
+      LowtoHight,
+    } = this.context;
+
+    const a = queryString.parse(this.props.location.search);
+
+    if (!a.page) {
+      this.Reload();
+      return <Redirect to="/products/?page=1" />;
     }
 
-    const a = items.filter((i) => {
-      return i.categories[0] === "Actions";
-    });
-    console.log(a);
     return (
       <>
+        <PageLogIn />
+        <div
+          className="card-ground"
+          onClick={() => outItem()}
+          style={{ display: isDisplay }}
+        >
+          <CardGround />
+        </div>
         <div className="style-header">
           <ComponentHeader />
+          <ComponentMenu />
           <Background title="Shop" />
           <div className="body-page">
             <div className="element">
               <div className="category-style">
                 <p>Shop by Categories</p>
                 <ul className="category-list">
-                  <li>
-                    <Link to="/">Action</Link>
+                  <li onClick={() => filterItem("Actions")}>Actions</li>
+                  <li onClick={() => filterItem("Best Seller")}>Best Seller</li>
+                  <li onClick={() => filterItem("Boys")}>Boys</li>
+                  <li onClick={() => filterItem("CD")}>CD</li>
+                  <li onClick={() => filterItem("Drama")}>Drama</li>
+                  <li onClick={() => filterItem("EA Games")}>EA Games</li>
+                  <li onClick={() => filterItem("Horror")}>Horror</li>
+                  <li onClick={() => filterItem("Loved")}>Loved</li>
+                  <li onClick={() => filterItem("True Story")}>True Story</li>
+                  <li onClick={() => filterItem("Uncategorized")}>
+                    Uncategorized
                   </li>
-                  <li>
-                    <Link to="/">Best Seller</Link>
-                  </li>
-                  <li>
-                    <Link to="/">Boys</Link>
-                  </li>
-                  <li>
-                    <Link to="/">CD</Link>
-                  </li>
-                  <li>
-                    <Link to="/">Drama</Link>
-                  </li>
-                  <li>
-                    <Link to="/">EA Games</Link>
-                  </li>
-                  <li>
-                    <Link to="/">Horror</Link>
-                  </li>
-                  <li>
-                    <Link to="/">Loved</Link>
-                  </li>
-                  <li>
-                    <Link to="/">True Story</Link>
-                  </li>
-                  <li>
-                    <Link to="/">Uncategorized</Link>
-                  </li>
-                  <li>
-                    <Link to="/">Women</Link>
-                  </li>
+                  <li onClick={() => filterItem("Women")}>Women</li>
                 </ul>
               </div>
               <div className="products">
@@ -78,22 +115,13 @@ class ProductPage extends React.Component {
                       {this.state.trans}
                     </Dropdown.Toggle>
                     <Dropdown.Menu>
-                      <Dropdown.Item href="#/action-1">
-                        Default sorting
-                      </Dropdown.Item>
-                      <Dropdown.Item href="#/action-2">
-                        Sort by popularity
-                      </Dropdown.Item>
-                      <Dropdown.Item href="#/action-3">
-                        Sort by average rating
-                      </Dropdown.Item>
-                      <Dropdown.Item href="#/action-4">
-                        Sort by lastest
-                      </Dropdown.Item>
-                      <Dropdown.Item href="#/action-5">
+                      <Dropdown.Item>Default sorting</Dropdown.Item>
+                      <Dropdown.Item>Sort by popularity</Dropdown.Item>
+                      <Dropdown.Item>Sort by lastest</Dropdown.Item>
+                      <Dropdown.Item onClick={LowtoHight}>
                         Sort by price: low to high
                       </Dropdown.Item>
-                      <Dropdown.Item href="#/action-6">
+                      <Dropdown.Item onClick={HighttoLow}>
                         Sort by price: high to low
                       </Dropdown.Item>
                     </Dropdown.Menu>
@@ -102,9 +130,40 @@ class ProductPage extends React.Component {
                 <h2>Books</h2>
                 <div className="products-item">
                   <div className="items">
-                    <Card>{items}</Card>
+                    <Card>{filter}</Card>
                   </div>
                 </div>
+                <Pagination>
+                  <Pagination.First
+                    style={{ display: this.state.firstItem }}
+                    href="/products/?page=1"
+                  />
+                  <Pagination.Prev
+                    style={{ display: this.state.firstItem }}
+                    href={this.state.prevUrlPage()}
+                  />
+                  <Pagination.Item href="/products/?page=1">
+                    {1}
+                  </Pagination.Item>
+                  <Pagination.Item href="/products/?page=2">
+                    {2}
+                  </Pagination.Item>
+                  <Pagination.Item href="/products/?page=3">
+                    {3}
+                  </Pagination.Item>
+                  <Pagination.Item href="/products/?page=4">
+                    {4}
+                  </Pagination.Item>
+                  <Pagination.Next
+                    style={{ display: this.state.lastItem }}
+                    href={this.state.nextUrlPage()}
+                  />
+
+                  <Pagination.Last
+                    style={{ display: this.state.lastItem }}
+                    href="/products/?page=4"
+                  />
+                </Pagination>
                 <Link to="/" className="button-view-all">
                   View All
                 </Link>

@@ -1,8 +1,14 @@
 import React, { Component } from "react";
+import DataLogin from "../db.json";
 
 export const DataContext = React.createContext();
 
 export class Data extends Component {
+  constructor(props) {
+    super(props);
+    this.Reload = this.Reload.bind(this);
+  }
+
   state = {
     products: [
       {
@@ -16,6 +22,7 @@ export class Data extends Component {
           "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2017/06/book-2-300x426.jpg",
         categories: ["Best Seller", "True Story"],
         count: 1,
+        review: [],
       },
       {
         _id: 2,
@@ -28,6 +35,7 @@ export class Data extends Component {
           "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2017/06/book-1-300x457.jpg",
         categories: ["Best Seller", "Loved"],
         count: 1,
+        review: [],
       },
       {
         _id: 3,
@@ -40,6 +48,7 @@ export class Data extends Component {
           "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2017/06/rebelsand-book-300x453.jpg",
         categories: ["Actions"],
         count: 1,
+        review: [],
       },
       {
         _id: 4,
@@ -52,6 +61,7 @@ export class Data extends Component {
           "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2017/06/imortal-book-300x452.jpg",
         categories: ["Horror"],
         count: 1,
+        review: [],
       },
       {
         _id: 5,
@@ -64,6 +74,7 @@ export class Data extends Component {
           "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2017/06/fairest-book-300x452.jpg",
         categories: ["Best Seller"],
         count: 1,
+        review: [],
       },
       {
         _id: 6,
@@ -76,6 +87,7 @@ export class Data extends Component {
           "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2017/06/book-3-330x452.jpg",
         categories: ["Horror"],
         count: 1,
+        review: [],
       },
       {
         _id: 7,
@@ -86,8 +98,9 @@ export class Data extends Component {
           "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2016/10/author_7-150x150.jpg",
         img:
           "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2016/10/Book_009-330x452.jpg",
-        categories: ["Drama", " rue Story"],
+        categories: ["Drama", "True Story"],
         count: 1,
+        review: [],
       },
       {
         _id: 8,
@@ -100,6 +113,7 @@ export class Data extends Component {
           "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2016/10/book_025-330x452.png",
         categories: ["Drama", "Horror"],
         count: 1,
+        review: [],
       },
       {
         _id: 9,
@@ -112,6 +126,7 @@ export class Data extends Component {
           "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2016/10/book_028-330x452.png",
         categories: ["Best Seller", "True Story", "Women"],
         count: 1,
+        review: [],
       },
       {
         _id: 10,
@@ -124,6 +139,7 @@ export class Data extends Component {
           "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2016/10/Book_001_0-330x452.jpg",
         categories: ["Best Seller", "True Story"],
         count: 1,
+        review: [],
       },
       {
         _id: 11,
@@ -136,6 +152,7 @@ export class Data extends Component {
           "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2016/10/Book_016-330x452.jpg",
         categories: ["Drama", "True Story"],
         count: 1,
+        review: [],
       },
       {
         _id: 12,
@@ -148,6 +165,7 @@ export class Data extends Component {
           "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2016/10/Book_008_0-330x452.jpg",
         categories: ["Best Seller", "Drama"],
         count: 1,
+        review: [],
       },
       {
         _id: 13,
@@ -160,6 +178,7 @@ export class Data extends Component {
           "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2016/10/Book_017-330x452.jpg",
         categories: ["True Story"],
         count: 1,
+        review: [],
       },
       {
         _id: 14,
@@ -172,6 +191,7 @@ export class Data extends Component {
           "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2016/10/book_026.png",
         categories: ["Best Seller", "True Story"],
         count: 1,
+        review: [],
       },
       {
         _id: 15,
@@ -184,6 +204,7 @@ export class Data extends Component {
           "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2016/10/Book_014-300x464.jpg",
         categories: ["Drama"],
         count: 1,
+        review: [],
       },
       {
         _id: 16,
@@ -196,6 +217,7 @@ export class Data extends Component {
           "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2016/10/Book_007.jpg",
         categories: ["Loved", "True Story"],
         count: 1,
+        review: [],
       },
       {
         _id: 17,
@@ -208,6 +230,7 @@ export class Data extends Component {
           "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2016/10/Book_020.jpg",
         categories: ["Drama", "True Story"],
         count: 1,
+        review: [],
       },
       {
         _id: 18,
@@ -220,6 +243,7 @@ export class Data extends Component {
           "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2016/10/book_027-330x452.png",
         categories: ["Best Seller", "Women"],
         count: 1,
+        review: [],
       },
       {
         _id: 19,
@@ -232,6 +256,7 @@ export class Data extends Component {
           "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2016/10/Book_015-330x452.jpg",
         categories: ["True Story"],
         count: 1,
+        review: [],
       },
       {
         _id: 20,
@@ -244,6 +269,7 @@ export class Data extends Component {
           "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2016/10/Book_018.jpg",
         categories: ["Drama", "True Story"],
         count: 1,
+        review: [],
       },
       {
         _id: 21,
@@ -256,6 +282,7 @@ export class Data extends Component {
           "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2016/10/Book_010.jpg",
         categories: ["Horror", "True Story"],
         count: 1,
+        review: [],
       },
       {
         _id: 22,
@@ -268,6 +295,7 @@ export class Data extends Component {
           "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2016/10/Book_013.jpg",
         categories: ["Drama", "True Story"],
         count: 1,
+        review: [],
       },
       {
         _id: 23,
@@ -280,6 +308,7 @@ export class Data extends Component {
           "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2016/10/Book_011.jpg",
         categories: ["Drama", "True Story"],
         count: 1,
+        review: [],
       },
       {
         _id: 24,
@@ -292,10 +321,17 @@ export class Data extends Component {
           "https://demo2.tokomoo.com/livre/wp-content/uploads/sites/16/2016/10/Book_019.jpg",
         categories: ["True Story"],
         count: 1,
+        review: [],
       },
     ],
     data: [[]],
     dataAddProduct: [],
+    isDisplay: "none",
+    items: [],
+    filter: [],
+    isDisplayComponent: "none",
+    commentItem: [],
+    userLogin: DataLogin,
   };
 
   addCardProduct = (id) => {
@@ -317,6 +353,14 @@ export class Data extends Component {
         dataAddProduct: [...dataAddProduct, ...dataAdd],
       });
     }
+  };
+
+  deleteCardProduct = (id) => {
+    const { dataAddProduct } = this.state;
+    const dataFilter = dataAddProduct.filter((i) => {
+      return i._id !== id;
+    });
+    this.setState({ dataAddProduct: dataFilter });
   };
 
   returnCardProduct = (id) => {
@@ -372,11 +416,124 @@ export class Data extends Component {
   getDataItemCart = (item) => {
     const { data } = this.state;
     data.push(item);
-    console.log(data);
+    this.setState({ data: data });
+
+    if (this.state.isDisplay === "none") {
+      this.setState({
+        isDisplay: "block",
+      });
+    }
+    console.log(item);
+  };
+
+  outItem = () => {
+    if (this.state.isDisplay === "block") {
+      this.setState({
+        isDisplay: "none",
+      });
+    }
+  };
+
+  SearchItem = (value) => {
+    const { items } = this.state;
+    const a = items.filter((i) => {
+      const b = i.name.toLowerCase();
+      return b.indexOf(value) !== -1;
+    });
+    this.setState({ filter: a });
+  };
+
+  filterItem = (value) => {
+    let { items } = this.state;
+    let a = [];
+    const b = items.filter((i) => {
+      const c = i.categories.filter((x) => {
+        return x === value;
+      });
+      if (c.length > 0) {
+        a.push(i);
+      }
+    });
+    this.setState({ filter: a });
+  };
+
+  HighttoLow = () => {
+    const { items } = this.state;
+    const a = items.sort((x, y) => {
+      return y.price - x.price;
+    });
+    this.setState({ filter: a });
+  };
+
+  LowtoHight = () => {
+    const { items } = this.state;
+    const a = items.sort((x, y) => {
+      return x.price - y.price;
+    });
+    this.setState({ filter: a });
+  };
+
+  ChangeState = () => {
+    this.setState({ items: this.state.products });
+    this.setState({ filter: this.state.products });
+  };
+
+  ChangeState1 = (dataList) => {
+    this.setState({ items: dataList });
+    this.setState({ filter: dataList });
+  };
+
+  Pagination = (page = 1) => {
+    const { products } = this.state;
+    let perPage = 6;
+    let start = (page - 1) * perPage;
+    let end = page * perPage;
+    const a = products.slice(start, end);
+    this.setState({ items: a, filter: a });
+  };
+
+  onClickBlock = () => {
+    if (this.state.isDisplayComponent === "none") {
+      this.setState({ isDisplayComponent: "block" });
+    }
+  };
+
+  onClickNone = () => {
+    if (this.state.isDisplayComponent === "block") {
+      this.setState({ isDisplayComponent: "none" });
+    }
+  };
+
+  Reload = () => {
+    setTimeout(() => window.location.reload(1), 100);
+  };
+
+  addComment = (getComment) => {
+    let { products } = this.state;
+
+    for (let y of products) {
+      y.review = [];
+      for (let x of getComment) {
+        if (Number(x.id) === y._id) {
+          y.review.push(x);
+        }
+      }
+    }
+    this.setState({ products: products });
   };
 
   render() {
-    const { products, data, dataAddProduct, textValue } = this.state;
+    const {
+      products,
+      data,
+      dataAddProduct,
+      textValue,
+      isDisplay,
+      items,
+      filter,
+      isDisplayComponent,
+      userLogin,
+    } = this.state;
     const {
       addCardProduct,
       deleteCardProduct,
@@ -384,21 +541,49 @@ export class Data extends Component {
       minus,
       getCount,
       getDataItemCart,
+      outItem,
+      SearchItem,
+      ChangeState,
+      filterItem,
+      HighttoLow,
+      LowtoHight,
+      ChangeState1,
+      Pagination,
+      onClickBlock,
+      onClickNone,
+      addComment,
+      Reload,
     } = this;
-
     return (
       <DataContext.Provider
         value={{
           products,
           data,
           dataAddProduct,
+          textValue,
+          isDisplay,
+          items,
+          filter,
+          isDisplayComponent,
+          userLogin,
           addCardProduct,
           deleteCardProduct,
-          textValue,
           plus,
           minus,
           getCount,
           getDataItemCart,
+          outItem,
+          SearchItem,
+          ChangeState,
+          filterItem,
+          HighttoLow,
+          LowtoHight,
+          ChangeState1,
+          Pagination,
+          onClickBlock,
+          onClickNone,
+          addComment,
+          Reload,
         }}
       >
         {this.props.children}

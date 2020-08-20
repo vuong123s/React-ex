@@ -40,19 +40,31 @@ import "./css/add-page.css";
 /* Card Buy Page */
 import "./css/card-buy.css";
 
+/* Search Page */
+import SearchPage from "./components/search-page";
+import "./css/search.css";
+/* Login Tap */
+
+import "./css/login.css";
+
+/* PageSign */
+import PageSign from "./components/pageSign";
+
 function App() {
   return (
     <Data>
       <div>
         <Switch>
           <Route path="/" exact component={HomePage} />
-          <Route path="/products" exact component={ProductPage} />
+          <Route path="/products" component={ProductPage} />
           <Route path="/card/:id" component={CardPage} />
           <Route
             path="/add-product-card"
             exact
             component={AddProductPage}
           ></Route>
+          <Route path="/search" component={SearchPage} />
+          <Route path="/sign" component={PageSign} />
           <Route component={ErrPage} />
         </Switch>
       </div>

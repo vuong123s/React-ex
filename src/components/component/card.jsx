@@ -2,9 +2,8 @@ import React, { Component } from "react";
 import { RiShoppingBagLine } from "react-icons/ri";
 import { BsEye } from "react-icons/bs";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import CardGround from "./card-ground";
+
 import { DataContext } from "../data";
-import AddProductCard from "../addProductCard";
 
 export default class card extends Component {
   static contextType = DataContext;
@@ -25,38 +24,27 @@ export default class card extends Component {
     }
   }
 
-  outItem() {
-    if (this.state.isDisplay === "block") {
-      this.setState({
-        isDisplay: "none",
-      });
-    }
-  }
-
   render() {
     const { children } = this.props;
-    const { data, addCardProduct } = this.context;
+    const {
+      addCardProduct,
+      getDataItemCart,
+      outItem,
+      isDisplay,
+    } = this.context;
     return (
       <>
-        <div
-          className="card-ground"
-          onClick={() => this.outItem()}
-          style={{ display: this.state.isDisplay }}
-        >
-          <CardGround data={data} />
-        </div>
-
         {children.map((item) => {
           return (
-            <div className="card-style" key={item._id}>
+            <div className="card-style">
               <div className="Card">
                 <div className="hover-card">
                   <img src={item.img} alt="Img" />
 
                   <div className="hover-img">
                     <BsEye
-                      onClick={() => this.getData(item)}
                       className="see-icon"
+                      onClick={() => getDataItemCart(item)}
                     />
                   </div>
                 </div>

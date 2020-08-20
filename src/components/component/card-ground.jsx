@@ -6,11 +6,13 @@ import {
   AiOutlineGooglePlus,
   AiFillLinkedin,
 } from "react-icons/ai";
+import { DataContext } from "../data";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 export default class CardGround extends React.Component {
+  static contextType = DataContext;
   render() {
-    const { data } = this.props;
+    const { data } = this.context;
     return (
       <div className="card-ground-component">
         <div className="card-ground-style">

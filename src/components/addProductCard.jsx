@@ -3,6 +3,7 @@ import ComponentHeader from "./component/component-header";
 import End from "./component/end";
 import { DataContext } from "./data";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import ComponentMenu from "./component/component-menu";
 import { Button } from "react-bootstrap";
 import { FaFacebookF } from "react-icons/fa";
 import {
@@ -12,6 +13,7 @@ import {
 } from "react-icons/ai";
 import CardAnimation from "./component/card-animation";
 import Review from "./component/review";
+import PageLogIn from "./component/pageLogIn";
 export class addProductCard extends Component {
   static contextType = DataContext;
   constructor(props) {
@@ -48,6 +50,9 @@ export class addProductCard extends Component {
 
   componentDidMount() {
     this.getData();
+    const { addComment } = this.context;
+    const getComment = JSON.parse(localStorage.getItem("dataComment"));
+    addComment(getComment);
   }
 
   componentDidUpdate() {
@@ -103,11 +108,14 @@ export class addProductCard extends Component {
         categori += `${y + ", "}`;
       }
     }
+
     const { addCardProduct } = this.context;
     return (
       <>
+        <PageLogIn />
         <div className="style-header-add-card">
           <ComponentHeader />
+          <ComponentMenu />
           {product.map((i) => {
             return (
               <>
@@ -269,7 +277,7 @@ export class addProductCard extends Component {
                   className="review-component"
                   style={{ display: this.state.flex }}
                 >
-                  <Review i={i} />
+                  <Review i={i} id={this.props.match.params.id} />
                 </div>
               </>
             );

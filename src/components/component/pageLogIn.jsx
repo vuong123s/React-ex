@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { TiDeleteOutline, TiDelete } from "react-icons/ti";
 import { DataContext } from "../data";
+import Cookie from "js-cookie";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 export default class PageLogIn extends Component {
@@ -30,13 +31,15 @@ export default class PageLogIn extends Component {
   };
 
   checkLogIn = () => {
-    const { userLogin, Reload } = this.context;
+    const { userLogin, ReloadAll, logIn } = this.context;
     const { userName, passWord } = this.state;
     const a = userLogin[0].loginData.filter((i) => {
       return (i.pass === passWord) & (i.user === userName);
     });
+    const b = { userName, passWord };
     if (a.length === 1) {
-      Reload();
+      Cookie.set("username", b);
+      ReloadAll();
     } else {
       alert("Xin hay dang nhap lai");
     }
@@ -68,7 +71,7 @@ export default class PageLogIn extends Component {
                 <div className="password-tap">
                   <p>Password *</p>
                   <input
-                    type="text"
+                    type="password"
                     placeholder="Your Password"
                     className="input-login-tap"
                     value={this.state.passWord}

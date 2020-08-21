@@ -40,7 +40,10 @@ export default class AddProductPage extends React.Component {
                         <div className="cart-buy-img">
                           <img src={i.img} alt="" width={100} height={150} />
                         </div>
-                        <RiDeleteBin5Line size={25} />
+                        <RiDeleteBin5Line
+                          size={25}
+                          onClick={() => deleteCardProduct(i._id)}
+                        />
                       </div>
                       <div className="cart-buy-name">
                         <p className="width-title">Product</p>

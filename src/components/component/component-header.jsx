@@ -1,11 +1,11 @@
 import React from "react";
 import Logo from "../../img/logo.png";
-import { BsSearch } from "react-icons/bs";
+import { BsSearch, BsPersonSquare } from "react-icons/bs";
 import { GiHamburgerMenu } from "react-icons/gi";
 /*import AddProduct from "./add-product";*/
 import { BrowserRouter as Router, Link, Redirect } from "react-router-dom";
 import { DataContext } from "../data";
-
+import Cookie from "js-cookie";
 import queryString from "query-string";
 
 export default class ComponentHeader extends React.Component {
@@ -18,6 +18,7 @@ export default class ComponentHeader extends React.Component {
 
   state = {
     value: "",
+    isShow: "none",
   };
 
   handleChange(event) {
@@ -28,8 +29,29 @@ export default class ComponentHeader extends React.Component {
     setTimeout(() => window.location.reload(), 100);
   };
 
+  componentDidMount() {
+    const { logIn } = this.context;
+    const getUser = Cookie.get("username");
+    if (getUser) {
+      logIn();
+    }
+  }
+
+  ShowMenu() {
+    if (this.state.isShow === "none") {
+      this.setState({ isShow: "block" });
+    } else {
+      this.setState({ isShow: "none" });
+    }
+  }
+
+  logOut() {
+    Cookie.remove("username");
+    this.Reload();
+  }
+
   render() {
-    const { dataAddProduct, onClickBlock } = this.context;
+    const { dataAddProduct, onClickBlock, isLogin, isNotLogin } = this.context;
 
     return (
       <>
@@ -89,9 +111,30 @@ export default class ComponentHeader extends React.Component {
                   <BsSearch className="Search-icon" />
                 </label>
               </div>
-              <div className="Login-style" onClick={() => onClickBlock()}>
+              <div
+                className="Login-style"
+                style={{ display: isNotLogin }}
+                onClick={() => onClickBlock()}
+              >
                 Log In
               </div>
+              <div className="avatar Login-style" style={{ display: isLogin }}>
+                <BsPersonSquare
+                  size={35}
+                  color="#eb8367"
+                  onClick={() => this.ShowMenu()}
+                />
+                <div
+                  className="menu-login"
+                  style={{ display: this.state.isShow }}
+                >
+                  <ul className="menu-avatar">
+                    <li onClick={() => this.logOut()}>Log Out</li>
+                    <li>Avatar</li>
+                  </ul>
+                </div>
+              </div>
+
               <Link to="/add-product-card" className="card-style-product">
                 <div className="card-buy">
                   <span>Card</span>

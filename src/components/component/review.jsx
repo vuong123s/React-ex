@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { GoStar } from "react-icons/go";
+import { BsPersonSquare } from "react-icons/bs";
 import StarRatingComponent from "react-star-rating-component";
 import { DataContext } from "../data";
+import Cookie from "js-cookie";
 
 export default class Review extends React.Component {
   state = {
@@ -25,31 +27,36 @@ export default class Review extends React.Component {
   addLocal() {
     const { rating, value } = this.state;
     const { id } = this.props;
-    const { Reload } = this.context;
-
-    if (rating !== null) {
-      let a = {
-        id: id,
-        rating: rating,
-        value: value,
-      };
-      const b = JSON.parse(localStorage.getItem("dataComment"));
-      let c;
-      if (b === null) {
-        c = [];
-      } else {
-        c = b;
+    const { Reload, onClickBlock } = this.context;
+    const a = Cookie.get("username");
+    if (a) {
+      if (rating !== null) {
+        let a = {
+          id: id,
+          rating: rating,
+          value: value,
+        };
+        const b = JSON.parse(localStorage.getItem("dataComment"));
+        let c;
+        if (b === null) {
+          c = [];
+        } else {
+          c = b;
+        }
+        c.push(a);
+        localStorage.setItem("dataComment", JSON.stringify(c));
+        Reload();
       }
-      c.push(a);
-      localStorage.setItem("dataComment", JSON.stringify(c));
-      Reload();
+    } else {
+      onClickBlock();
     }
   }
 
   render() {
     const { i } = this.props;
     const { value } = this.state;
-    console.log(this.state.rating);
+    const a = JSON.parse(Cookie.get("username"));
+
     return (
       <div className="review">
         <div className="review-text">
@@ -58,6 +65,8 @@ export default class Review extends React.Component {
             {i.review.map((x) => {
               return (
                 <div className="user-comment">
+                  <BsPersonSquare size={50} />
+                  <h5>{a.userName}</h5>
                   <StarRatingComponent starColor="#eb8367" value={x.rating} />
                   <p>{x.value}</p>
                 </div>

@@ -332,6 +332,8 @@ export class Data extends Component {
     isDisplayComponent: "none",
     commentItem: [],
     userLogin: DataLogin,
+    isLogin: "none",
+    isNotLogIn: "block",
   };
 
   addCardProduct = (id) => {
@@ -508,6 +510,10 @@ export class Data extends Component {
     setTimeout(() => window.location.reload(1), 100);
   };
 
+  ReloadAll = () => {
+    window.location.reload();
+  };
+
   addComment = (getComment) => {
     let { products } = this.state;
 
@@ -522,6 +528,10 @@ export class Data extends Component {
     this.setState({ products: products });
   };
 
+  logIn = () => {
+    this.setState({ isLogin: "block", isNotLogin: "none" });
+  };
+
   render() {
     const {
       products,
@@ -533,6 +543,8 @@ export class Data extends Component {
       filter,
       isDisplayComponent,
       userLogin,
+      isLogin,
+      isNotLogin,
     } = this.state;
     const {
       addCardProduct,
@@ -553,6 +565,8 @@ export class Data extends Component {
       onClickNone,
       addComment,
       Reload,
+      logIn,
+      ReloadAll,
     } = this;
     return (
       <DataContext.Provider
@@ -566,6 +580,8 @@ export class Data extends Component {
           filter,
           isDisplayComponent,
           userLogin,
+          isLogin,
+          isNotLogin,
           addCardProduct,
           deleteCardProduct,
           plus,
@@ -584,6 +600,8 @@ export class Data extends Component {
           onClickNone,
           addComment,
           Reload,
+          ReloadAll,
+          logIn,
         }}
       >
         {this.props.children}
